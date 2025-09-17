@@ -1,8 +1,8 @@
 ---
 title: About
 image: headshot.jpg
-about: This is an experimental blog to understand and reflect on LLMs in healthcare and pop culture.
+about:
   template: jolla
 ---
 
-About this blog
+This is an experimental blog to understand and reflect on LLMs in healthcare and pop culture.
