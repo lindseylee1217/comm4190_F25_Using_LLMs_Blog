@@ -2,9 +2,13 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/=--005_Dresscode/LLM_Dresscode.html",
+      "/posts/005_Please/LLM_Please.html",
+      "/posts/004_LLM_Design/LLM_Design.html",
       "/posts/003_LLM_Madlib/Untitled.html",
       "/posts/002_LLM_Diagnose/LLM_Diagnose.html",
       "/posts/001_Personal_Color/Personal Color.html",
+      "/posts/000_test_post-Copy1-Copy1/index.html",
       "/posts/000_test_post/index.html"
     ]
   }

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lindsey Lee">
+<meta name="dcterms.date" content="2025-09-17">
+<meta name="description" content="We’re taught from childhood that politeness goes a long way—but does that wisdom hold true when talking to LLMs?">
 
-<title>My Explorations with LLMs – Lindsey Lee - Explorations with LLMs</title>
+<title>Prompting Etiquette: Do Manners Matter with LLMs? – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-aa30f0152425d24dff248ec87fb33f26.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-aa30f0152425d24dff248ec87fb33f26.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,79 +71,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Lindsey Lee - Explorations with LLMs</span>
     </a>
   </div>
@@ -153,7 +96,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -176,306 +119,103 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Prompting Etiquette: Do Manners Matter with LLMs?</h1>
+                  <div>
+        <div class="description">
+          We’re taught from childhood that politeness goes a long way—but does that wisdom hold true when talking to LLMs?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">LLMs</div>
+                <div class="quarto-category">Linguistics</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lindsey Lee </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 17, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Q3JlYXRpdmU=">Creative <span class="quarto-category-count">(4)</span></div><div class="category" data-category="RmFzaGlvbg==">Fashion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RnVu">Fun <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGVhbHRoY2FyZQ==">Healthcare <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGluZ3Vpc3RpY3M=">Linguistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(8)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="TExNcyUyQ0NyZWF0aXZl" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1758339339519" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="57">
-<div class="thumbnail"><a href="./posts/=--005_Dresscode/LLM_Dresscode.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/=--005_Dresscode/LLM_Dresscode.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q3JlYXRpdmU='); return false;">Creative</div>
-
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="LLM_Please_files/figure-html/3f5bc964-afc2-485a-a5c0-b6cf91832790-1-4736ab87-9452-45a4-ba21-8ff9cffcb6ec.jpg" class="img-fluid figure-img"></p>
+<figcaption>960x0.jpg</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/=--005_Dresscode/LLM_Dresscode.html" class="no-external">
-<p>Can LLMs tell the difference between dress codes?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/=--005_Dresscode/LLM_Dresscode.html" class="no-external">
-<div class="listing-date">
-Sep 17, 2025
-</div>
-<div class="listing-author">
-Lindsey
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="TExNcyUyQ0xpbmd1aXN0aWNz" data-listing-date-sort="1758067200000" data-listing-file-modified-sort="1758339339519" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="665">
-<div class="thumbnail"><a href="./posts/005_Please/LLM_Please.html" class="no-external">
+<p>We learn from an early age to be polite–saying the word “please” or “thank you,”–in hopes of receiving more kind responses. But what about when we’re talking to machines? It is curious to learn whether wording prompts politely makes any difference in the answers they get. Does saying “please” unlock better results, or is it just a habit carried over from human conversation? And well, there’s only one way to find out–try it for ourselves.</p>
+<section id="the-method" class="level1">
+<h1>The Method</h1>
+<p>I decided to compare ChatGPT’s reponse to asking it how to answers an explanatory question in two separate chats. I repeated this 3 separate times to see how the responses would vary. I chose a question using ChatGPT, asking it what it thought would be an appropriate question to ask for this little experiment, and I liked its results.</p>
+<p>The two questions:</p>
+<blockquote class="blockquote">
+<p>Explain photosynthesis in a concise form.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Please explain photosynthesis in a concise form.</p>
+</blockquote>
+<section id="no-please" class="level3">
+<h3 class="anchored" data-anchor-id="no-please">No Please</h3>
+<p>These are the following outputs: &gt; Photosynthesis is the process by which green plants, algae, and some bacteria use sunlight to make food. They take in carbon dioxide (CO₂) from the air and water (H₂O) from the soil, and with the help of chlorophyll and sunlight, convert them into glucose (a sugar) and oxygen (O₂). &gt; &gt; In short: <strong>Sunlight + CO₂ + H₂O → Glucose + O₂</strong> &gt; &gt; It’s how plants produce energy for themselves and release oxygen for us to breathe.</p>
+<blockquote class="blockquote">
+<p>Photosynthesis is the process by which green plants, algae, and some bacteria use sunlight, water, and carbon dioxide to produce glucose (a form of sugar) for energy and release oxygen as a byproduct.</p>
+<p>In short: <strong>sunlight + water + carbon dioxide → glucose + oxygen.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Photosynthesis is the process by which green plants, algae, and some bacteria convert light energy into chemical energy. Using sunlight, they take in carbon dioxide (CO₂) from the air and water (H₂O) from the soil to produce glucose (a sugar for energy) and release oxygen (O₂) as a byproduct.</p>
+<p>In short: <strong>Light energy + CO₂ + H₂O → Glucose + O₂</strong></p>
+</blockquote>
+</section>
+<section id="please" class="level3">
+<h3 class="anchored" data-anchor-id="please">Please</h3>
+<p>These are the following outputs: &gt; Photosynthesis is the process by which green plants, algae, and some bacteria use sunlight, water, and carbon dioxide to produce glucose (a form of sugar) and oxygen. &gt; &gt; In short: <strong>Carbon dioxide + Water + Sunlight → Glucose + Oxygen</strong> &gt; &gt; It mainly happens in the chloroplasts of plant cells, where chlorophyll captures sunlight to power the reaction.</p>
+<blockquote class="blockquote">
+<p>Photosynthesis is the process by which green plants, algae, and some bacteria use sunlight to make food. They take in carbon dioxide (CO₂) from the air and water (H₂O) from the soil, then use light energy (captured by chlorophyll) to produce glucose (a sugar for energy) and release oxygen (O₂) as a byproduct.</p>
+<p>In short: <strong>Light energy + CO₂ + H₂O → Glucose + O₂.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Photosynthesis is how plants, algae, and some bacteria make food. Using sunlight, they convert carbon dioxide (CO₂) and water (H₂O) into glucose (sugar for energy) and release oxygen (O₂).</p>
+<p>In short: <strong>Light energy + CO₂ + H₂O → Glucose + O₂</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<p>It’s intriguing to note that one of the main differences between these two outputs is that, as I continued to ask ChatGPT the same question, the answers became progressively more brief and concise. This gives the impression that the model was refining its responses over time, almost as if it “remembered” having already provided an explanation and was adjusting to avoid redundancy. The shortening of responses could also suggest that the model is optimizing for efficiency once it has established the key elements of the answer, prioritizing clarity over repetition.</p>
+<p>Overall, I infer that there is no difference in the quality or quantity of output given by ChatGPT when prompted politely or not. Both sets of responses maintain the same level of accuracy, clarity, and usefulness, with only slight variations in style or depth. This suggests that the inclusion of the word “please” does not directly influence the factual content or thoroughness of the explanation, but rather the model’s internal balancing of conciseness and variety (temperature) in repeated answers.</p>
 
-<p class="card-img-top"><img src="posts/005_Please/LLM_Please_files/figure-html/3f5bc964-afc2-485a-a5c0-b6cf91832790-1-4736ab87-9452-45a4-ba21-8ff9cffcb6ec.jpg"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_Please/LLM_Please.html" class="no-external">Prompting Etiquette: Do Manners Matter with LLMs?</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TGluZ3Vpc3RpY3M='); return false;">Linguistics</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/005_Please/LLM_Please.html" class="no-external">
-<p>We’re taught from childhood that politeness goes a long way—but does that wisdom hold true when talking to LLMs?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_Please/LLM_Please.html" class="no-external">
-<div class="listing-date">
-Sep 17, 2025
-</div>
-<div class="listing-author">
-Lindsey Lee
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="TExNcyUyQ0NyZWF0aXZl" data-listing-date-sort="1757980800000" data-listing-file-modified-sort="1758339339518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="622">
-<div class="thumbnail"><a href="./posts/004_LLM_Design/LLM_Design.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/004_LLM_Design/LLM_Design_files/figure-html/cce822aa-03e3-48b9-bb69-4302a06782ea-1-d314f4d2-b978-4bcc-81e6-89adaa2bb253.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_LLM_Design/LLM_Design.html" class="no-external">LLM Digital Action Figure Trend - Will I Like It?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q3JlYXRpdmU='); return false;">Creative</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_LLM_Design/LLM_Design.html" class="no-external">
-<p>Can I be made into a doll by an LLM?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_LLM_Design/LLM_Design.html" class="no-external">
-<div class="listing-date">
-Sep 16, 2025
-</div>
-<div class="listing-author">
-Lindsey Lee
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TExNcyUyQ0NyZWF0aXZlJTJDRnVu" data-listing-date-sort="1757635200000" data-listing-file-modified-sort="1758339339420" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="568">
-<div class="thumbnail"><a href="./posts/003_LLM_Madlib/Untitled.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_LLM_Madlib/Untitled_files/figure-html/666b214c-8c7c-40bc-8deb-d25a0e1062bd-1-c40722a4-c6ce-43ec-a409-3fa6df7def26.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_LLM_Madlib/Untitled.html" class="no-external">Mad Libs with LLMs: Is it the same?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q3JlYXRpdmU='); return false;">Creative</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RnVu'); return false;">Fun</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_LLM_Madlib/Untitled.html" class="no-external">
-<p>LLMs are renowned for their ability to process, analyze, and generate human language. But now, how do they fare in a game of Mad Libs?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_LLM_Madlib/Untitled.html" class="no-external">
-<div class="listing-date">
-Sep 12, 2025
-</div>
-<div class="listing-author">
-Lindsey Lee
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TExNcyUyQ0hlYWx0aGNhcmU=" data-listing-date-sort="1757462400000" data-listing-file-modified-sort="1758339339416" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="273">
-<div class="thumbnail"><a href="./posts/002_LLM_Diagnose/LLM_Diagnose.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/002_LLM_Diagnose/LLM_Diagnose_files/figure-html/112e2bf8-e089-4c51-9df0-68432f21a698-1-05052719-44d2-4797-85da-6be08f98e4ef.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_LLM_Diagnose/LLM_Diagnose.html" class="no-external">Will LLMs Become the Future of Healthcare?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGVhbHRoY2FyZQ=='); return false;">Healthcare</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_LLM_Diagnose/LLM_Diagnose.html" class="no-external">
-<p>With the rise of telehealth, it brings the question if LLMs could optimize the diagnostic process.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_LLM_Diagnose/LLM_Diagnose.html" class="no-external">
-<div class="listing-date">
-Sep 10, 2025
-</div>
-<div class="listing-author">
-Lindsey Lee
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="TExNcyUyQ0Zhc2hpb24lMkNDcmVhdGl2ZQ==" data-listing-date-sort="1756857600000" data-listing-file-modified-sort="1758339339411" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="593">
-<div class="thumbnail"><a href="./posts/001_Personal_Color/Personal Color.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/001_Personal_Color/Personal Color_files/figure-html/9c78e1a4-658a-4bf6-9a8e-531221df0a47-1-b96856e0-f90a-4dd5-bc1d-6a3eb4bd822b.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_Personal_Color/Personal Color.html" class="no-external">My New Personal Color Analyst: ChatGPT</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RmFzaGlvbg=='); return false;">Fashion</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q3JlYXRpdmU='); return false;">Creative</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_Personal_Color/Personal Color.html" class="no-external">
-<p>Why spend hundreds of dollars on meeting a stylist to find your color season when you ChatGPT can do it in the comfort of your home? Let’s dig deeper.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_Personal_Color/Personal Color.html" class="no-external">
-<div class="listing-date">
-Sep 3, 2025
-</div>
-<div class="listing-author">
-Lindsey Lee
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1758339339311" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post-Copy1-Copy1/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post-Copy1-Copy1/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1758339339312" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
