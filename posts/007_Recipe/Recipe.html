@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="An LLM User">
-<meta name="dcterms.date" content="2024-02-02">
-<meta name="description" content="An example post from a Jupyter notebook">
+<meta name="author" content="Lindsey Lee">
+<meta name="dcterms.date" content="2025-09-24">
+<meta name="description" content="Could AI be the next Gordon Ramsey?">
 
-<title>A test post – Lindsey Lee - Explorations with LLMs</title>
+<title>Discovering New Recipes with LLMs – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aa30f0152425d24dff248ec87fb33f26.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f0f7bf7b3f83ac8f88d53d1bbc6aeb07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -120,16 +120,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A test post</h1>
+      <h1 class="title">Discovering New Recipes with LLMs</h1>
                   <div>
         <div class="description">
-          An example post from a Jupyter notebook
+          Could AI be the next Gordon Ramsey?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">prompting</div>
-                <div class="quarto-category">logic</div>
+                <div class="quarto-category">Food</div>
+                <div class="quarto-category">Creative</div>
               </div>
                   </div>
   </div>
@@ -140,14 +140,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>An LLM User </p>
+               <p>Lindsey Lee </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 2, 2024</p>
+        <p class="date">September 24, 2025</p>
       </div>
     </div>
     
@@ -166,59 +166,204 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="a-visualization-problem-for-llms" class="level2">
-<h2 class="anchored" data-anchor-id="a-visualization-problem-for-llms">A visualization problem for LLMs</h2>
-<ul>
-<li>Read the following and see if you can answer the question:</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Recipe_files/figure-html/a7b95cd3-0afa-4d85-a115-7f1079497582-1-ae78e292-202e-4254-8fe0-308bd9e66919.png" class="img-fluid figure-img"></p>
+<figcaption>ChatGPT Image Sep 24, 2025, 11_15_15 PM.png</figcaption>
+</figure>
+</div>
+<p>As a HUGE foodie, I was curious to see what kinds of recipes LLMs could generate. More specifically, I’m interested to find out whether it can generate original recipes by combining other various recipes in its training data.</p>
+<p>I used gpt-4o for this activity. I gave it the following prompt:</p>
 <blockquote class="blockquote">
-<p>There are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?</p>
-</blockquote>
-<p>Most likely you answered <strong>purple</strong>…</p>
-<p>But it is possible you first said <strong>green</strong> (don’t worry if you did it is quite a common response!)</p>
-<section id="how-do-we-do-it" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-we-do-it">How do we do it?</h3>
-<p>It’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.</p>
-<p>Notice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.</p>
-<p><strong>Notice</strong> 1. The use of <em>anaphor</em> or <em>reference</em>. - <code>Three BOXES -&gt; a pink/purple/green ONE</code> as opposed to <code>a pink box, a purple box and a green box</code>. - <code>The PINK ONE is in the middle ... the purple</code> {BOX} <code>below IT</code> {the pink box}</p>
-<pre><code>We tend to try and avoid this kind of repetition to make our speech more coherent.</code></pre>
-<ol start="2" type="1">
-<li>Although the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |</li>
+<p>Create a completely original recipe that does not exist on the internet. This recipe should be unique in concept, flavor combination, and preparation method. Provide the following:</p>
+<ol type="1">
+<li><p>Image – Generate a realistic, appealing image of the finished dish.</p></li>
+<li><p>Description – Write a detailed description of the dish, including: (1) the flavor profiles and textures, (2) the inspiration behind the recipe, and (3) what makes it original.</p></li>
+<li><p>Recipe – Provide a complete recipe with: (1) a clear list of ingredients (with exact measurements), (2) step-by-step cooking instructions, and (3) tips or notes to enhance the dish.</p></li>
 </ol>
-</section>
-<section id="how-do-llms-response-to-the-prompt" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-llms-response-to-the-prompt">How do LLMs response to the prompt?</h3>
-<p><strong>GPT3.5 Turbo</strong></p>
-<p><img src="gpt3-5.png" width="50%"></p>
-<p>Had some difficulties and answered <strong>green</strong></p>
-<p><strong>Llama2 (chat 7B version)</strong></p>
-<p><img src="llama2-chat7b.png" width="50%"></p>
+<p>Please give your recipe a name.</p>
+</blockquote>
+<section id="citrus-grove-salmon-bowl" class="level3">
+<h3 class="anchored" data-anchor-id="citrus-grove-salmon-bowl"><strong>1. Citrus Grove Salmon Bowl</strong></h3>
+<div>
+<center>
+<img src="Recipe_files/figure-html/941f157e-7805-430c-a58f-23447fa9e186-1-645d8798-e45c-49e0-b762-d691358ccf40.png" width="600">
+</center></div>
+<p style="text-align:center;">
+<b>Description</b>
+</p>
+<p><strong>Flavor Profiles &amp; Textures:</strong> This dish brings together the richness of seared salmon with the unexpected brightness of citrus and nutty crunch. The salmon has a golden pistachio crust that’s slightly crisp on top, while the flesh remains buttery and flaky inside. It rests on a bed of short-grain rice that has been infused with a light citrus glaze, dotted with diced carrots and green peas for sweetness and freshness. Orange segments add a juicy burst of acidity, balancing the richness of the fish. Fresh basil provides a fragrant, herbal lift.</p>
+<p><strong>Inspiration:</strong> The inspiration came from the idea of combining three contrasting culinary traditions: the Mediterranean love for pistachios and herbs, Japanese-style rice bowls, and Southeast Asian citrus brightness. Instead of simply serving salmon with lemon, this dish incorporates whole orange segments, allowing the sweetness and acidity to mingle with savory rice and nutty pistachios.</p>
+<p><strong>What Makes It Original:</strong> Most citrus-salmon recipes focus on glazes or marinades. Here, the originality lies in layering citrus three ways: 1. In the rice (citrus glaze), 2. As garnish (fresh orange segments), and 3. Balanced with herbs and pistachios (creating a nutty-bright contrast).</p>
+<p>The result is a dish that feels familiar yet truly novel, with each bite offering a shifting balance of savory, nutty, sweet, and tangy.</p>
+<hr>
+<p style="text-align:center;">
+<b>Ingredients (Serves 2)</b>
+</p>
+<p><strong>For the salmon:</strong></p>
+<p>2 salmon fillets, skin removed (about 6 oz / 170 g each)</p>
+<p>2 tbsp olive oil</p>
+<p>2 tbsp unsalted pistachios, finely chopped</p>
+<p>2 tbsp panko breadcrumbs</p>
+<p>1 tsp honey</p>
+<p>½ tsp smoked paprika</p>
+<p>½ tsp salt</p>
+<p>¼ tsp black pepper</p>
+<p>For the citrus rice:</p>
+<p>1 cup short-grain rice, rinsed</p>
+<p>1 ¾ cups water</p>
+<p>½ tsp salt</p>
+<p>1 tbsp olive oil</p>
+<p>½ cup diced carrot</p>
+<p>½ cup green peas (fresh or frozen)</p>
+<p>2 tbsp fresh orange juice</p>
+<p>1 tsp soy sauce</p>
+<p><strong>For garnish:</strong></p>
+<p>1 large orange, peeled and segmented</p>
+<p>2 tbsp chopped pistachios</p>
+<p>Fresh basil leaves</p>
+<hr>
+<p style="text-align:center;">
+<b>Instructions</b>
+</p>
+<ol type="1">
+<li>Prepare the rice:</li>
+</ol>
 <ul>
-<li>Answered correctly (<strong>purple</strong>) and used some so-called <em>chain-of-thought</em> reasoning</li>
+<li>Rinse the rice until water runs clear. Combine with water and salt in a small pot, bring to a boil, then reduce to low, cover, and cook for 15 minutes.</li>
+<li>Meanwhile, heat olive oil in a pan. Sauté diced carrots for 3–4 minutes until slightly tender, then add peas and cook 2 more minutes.</li>
+<li>Once rice is cooked, fluff with a fork and fold in the sautéed vegetables, orange juice, and soy sauce. Set aside.</li>
 </ul>
-<p><strong>Bing Chat (MS Co-pilot)</strong></p>
-<p>This LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.</p>
-<p>It get’s it correct:</p>
-<blockquote class="blockquote">
-<p>The color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪</p>
-</blockquote>
-<p>But when you follow up and ask it to create visual representation of the box arrangement</p>
-<blockquote class="blockquote">
-<p>PROMPT: Can you create a visual representation of how the boxes are arranged?</p>
-</blockquote>
-<p>It responds</p>
-<blockquote class="blockquote">
-<p>RESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:</p>
-</blockquote>
-<p>And uses DALL-E3 to create 4 different attempts at a visual representation:</p>
-<p><img src="boxes.png" class="img-fluid"></p>
-<p><strong>NONE OF WHICH ARE CORRECT!!!</strong></p>
+<ol start="2" type="1">
+<li>Prepare the salmon crust:</li>
+</ol>
+<ul>
+<li>In a bowl, mix chopped pistachios, panko, honey, paprika, salt, and pepper until crumbly.</li>
+<li>Pat salmon fillets dry. Press the pistachio mixture firmly on the top of each fillet.</li>
+</ul>
+<ol start="3" type="1">
+<li>Cook the salmon:</li>
+</ol>
+<ul>
+<li>Heat olive oil in a non-stick skillet over medium heat. Place salmon crust-side down first for 2 minutes to lightly crisp the crust, then carefully flip.</li>
+<li>Cook the second side for 4–5 minutes until salmon is golden and just cooked through.</li>
+</ul>
+<ol start="4" type="1">
+<li>Assemble the dish:</li>
+</ol>
+<ul>
+<li>Spoon the citrus rice into bowls. Place a salmon fillet on top.</li>
+<li>Garnish with orange segments, a sprinkle of chopped pistachios, and fresh basil leaves.</li>
+</ul>
+<hr>
+<p style="text-align:center;">
+<b>Tips &amp; Notes</b>
+</p>
+<p>Texture Balance: Don’t skip the quick crisping of the pistachio crust—it creates a caramelized, nutty layer that contrasts with the salmon’s tenderness.</p>
+<p>Citrus Variety: Blood oranges or mandarins work beautifully for seasonal variations.</p>
+<p>Make It a Meal: Serve with a simple side salad of greens tossed in a light vinaigrette to round out the citrus-herbal theme.</p>
+<p>Rice Alternative: Quinoa or farro can replace short-grain rice if you prefer a heartier base.</p>
+<section id="velvet-halibut" class="level3">
+<h3 class="anchored" data-anchor-id="velvet-halibut"><strong>2. Velvet Halibut</strong></h3>
+<div>
+<center>
+<img src="Recipe_files/figure-html/bfa3c5d1-3c49-4745-896a-f99b4d097d94-1-17f8713b-0759-45ba-9dd9-70f796bb917e.png" width="600">
+</center></div>
+<p style="text-align:center;">
+<b>Description</b>
+</p>
+<p><strong>Flavor Profiles &amp; Textures:</strong> This dish layers bold contrasts: a pan-seared block of fish (mild and buttery, with a crisp golden crust) sits atop a smooth, roasted carrot–miso purée, which adds sweet depth and savory umami. On top, a warm relish of sautéed red peppers, green onions, and toasted walnuts provides a bright, nutty crunch that cuts through the richness of the fish. The final balance is a play of silky purée, crunchy garnish, tender fish, and a citrusy glaze that ties it all together.</p>
+<p><strong>Inspiration Behind the Recipe:</strong> The idea came from blending two culinary traditions — the smooth earthiness of root-vegetable purées from classic French cuisine with the miso-based balance of Japanese cooking. Adding a nut-and-vegetable relish on top makes it interactive, bringing texture and color to every bite.</p>
+<p><strong>What Makes It Original:</strong> 1. Carrot–miso purée (instead of the more common potato or cauliflower base). 2. A warm walnut–pepper relish as a “sauce” substitute, offering crunch instead of liquid. 3. The layering concept: bottom (creamy), middle (meaty fish), top (crisp relish). This creates a three-tier sensory experience in a single forkful.</p>
+<hr>
+<p style="text-align:center;">
+<b>Ingredients (Serves 2)</b>
+</p>
+<p><strong>For the carrot–miso purée:</strong></p>
+<p>3 medium carrots, peeled and chopped (about 250 g)</p>
+<p>1 tbsp white miso paste</p>
+<p>2 tbsp unsalted butter</p>
+<p>½ cup vegetable broth</p>
+<p>½ tsp lemon zest</p>
+<p>Pinch of salt</p>
+<p><strong>For the fish:</strong></p>
+<p>2 thick fillets of halibut, cod, or sea bass (about 6 oz / 170 g each)</p>
+<p>1 tbsp olive oil</p>
+<p>Salt and pepper to taste</p>
+<p>For the walnut–pepper relish:</p>
+<p>½ cup red bell pepper, julienned</p>
+<p>2 green onions, sliced thin</p>
+<p>¼ cup toasted walnuts, roughly chopped</p>
+<p>1 tbsp olive oil</p>
+<p>1 tsp apple cider vinegar</p>
+<p>½ tsp honey</p>
+<p>Pinch of salt</p>
+<p><strong>Finishing glaze (optional but recommended):</strong></p>
+<p>1 tbsp fresh orange juice</p>
+<p>1 tsp soy sauce</p>
+<p>½ tsp honey</p>
+<hr>
+<p style="text-align:center;">
+<b>Instructions</b>
+</p>
+<ol type="1">
+<li>Make the carrot–miso purée:</li>
+</ol>
+<ul>
+<li>In a small saucepan, add carrots and vegetable broth. Simmer until very tender (12–15 minutes).</li>
+<li>Blend carrots with miso paste, butter, and lemon zest until silky. Season lightly with salt. Keep warm.</li>
+</ul>
+<ol start="2" type="1">
+<li>Cook the fish:</li>
+</ol>
+<ul>
+<li>Pat fillets dry, season with salt and pepper.</li>
+<li>Heat olive oil in a skillet over medium-high.</li>
+<li>Sear fish 3–4 minutes per side until golden crust forms and flesh is just cooked through. Remove and rest.</li>
+</ul>
+<ol start="3" type="1">
+<li>Prepare the walnut–pepper relish:</li>
+</ol>
+<ul>
+<li>Heat olive oil in a pan over medium. Add red pepper, cook 3–4 minutes until softened but still vibrant.</li>
+<li>Stir in green onions, walnuts, vinegar, honey, and salt. Toss briefly and remove from heat.</li>
+</ul>
+<ol start="4" type="1">
+<li>Optional glaze:</li>
+</ol>
+<ul>
+<li>In the same pan, deglaze with orange juice, soy sauce, and honey. Reduce slightly until glossy.</li>
+</ul>
+<ol start="5" type="1">
+<li>Assemble:</li>
+</ol>
+<ul>
+<li>Spread carrot–miso purée as a base on each plate.</li>
+<li>Place fish fillet on top.</li>
+<li>Spoon walnut–pepper relish generously over fish.</li>
+<li>Drizzle with glaze for brightness.</li>
+</ul>
+<hr>
+<p style="text-align:center;">
+<b>Tips &amp; Notes</b>
+</p>
+<p>Fish choice: Firm white fish works best (halibut, cod, or sea bass). Salmon is also an option for a richer variation.</p>
+<p>Purée consistency: Add more broth if you prefer a looser base.</p>
+<p>Relish variations: Try hazelnuts or almonds instead of walnuts for different flavor notes.</p>
+<p>Make-ahead: Carrot–miso purée can be prepared up to 2 days in advance.</p>
+<section id="reflection" class="level3">
+<h3 class="anchored" data-anchor-id="reflection"><strong>Reflection</strong></h3>
+<p>Overall, I was a little stunned by these two recipes. While I suppose they are original, they are certainly interesting in not the best possible light. It’s like something a broke college kid might throw together at 2 a.m., then somehow plated like it belongs in a Michelin-star restaurant. The contrast is both impressive and a little confusing. Part of me is curious to see if the flavors actually work in real life, because perhaps there’s some hidden genius in the chaos that is this recipe. It may even be possible that gpt-4o drew from recipes that included these flavor profiles. But really? Orange juice, soy sauce, and honey? Maybe it’s just me and I haven’t tried this end of the flavor pyramid, but it does sound a little far-fetched.</p>
+<p>Perhaps one of these days I’ll give one of these recipes a shot in the kitchen to truly put AI to the test, but for now, I think I might keep this one away from the frying pan.</p>
 
 
 </section>
-</section>
+</section></section></main></div>
 
-</main> <!-- /main -->
+
+
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -619,7 +764,7 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-</div> <!-- /content -->
+ <!-- /content -->
 
 
 

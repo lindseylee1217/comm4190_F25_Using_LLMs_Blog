@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lindsey">
-<meta name="dcterms.date" content="2025-09-17">
-<meta name="description" content="Can LLMs tell the difference between dress codes?">
+<meta name="dcterms.date" content="2025-09-21">
+<meta name="description" content="Can AI beat me in a game of Semantle?">
 
-<title>A test post – Lindsey Lee - Explorations with LLMs</title>
+<title>Human vs.&nbsp;AI: a Game of Semantle – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-aa30f0152425d24dff248ec87fb33f26.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f0f7bf7b3f83ac8f88d53d1bbc6aeb07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -120,15 +120,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A test post</h1>
+      <h1 class="title">Human vs.&nbsp;AI: a Game of Semantle</h1>
                   <div>
         <div class="description">
-          Can LLMs tell the difference between dress codes?
+          Can AI beat me in a game of Semantle?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Creative</div>
+                <div class="quarto-category">Fun</div>
               </div>
                   </div>
   </div>
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 17, 2025</p>
+        <p class="date">September 21, 2025</p>
       </div>
     </div>
     
@@ -165,14 +165,55 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="a-visualization-problem-for-llms" class="level2">
-<h2 class="anchored" data-anchor-id="a-visualization-problem-for-llms">A visualization problem for LLMs</h2>
-<ul>
-<li>Read the following and see if you can answer the question:</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Semantle_files/figure-html/04211054-75c4-469f-abf2-4da26024d18f-1-db232e75-356f-4ffc-863c-338592070858.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot 2025-09-24 at 10.22.33 PM.png</figcaption>
+</figure>
+</div>
+<p><em>Semantle</em> is a daily online word puzzle where players try to guess a secret word not by letters, but by meaning. Each guess is scored based on its semantic similarity to the target word. Taken from the <em>Semantle</em> website,</p>
 <blockquote class="blockquote">
-<p>There are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?</p>
+<p>“Unlike other word games, this game is not about spelling; it’s about meaning. We calculate this meaning using artificial intelligence (specifically word2vec technology).</p>
+<p>In word2vec, each word has a measurable semantic distance from another, indicating their level of relatedness. Once you get within one thousand words of the secret word, we will tell you in the proximity column.”</p>
+<div style="text-align: right;">
+<p>Semantle, https://semantle.com/faq</p>
+</div>
 </blockquote>
+<p>In this game, there are no hints about letters–the only information given being the similarity of the nearest, tenth nearest, and thousandth nearest word. Only the abstract closeness of ideas in the logic of the AI model applies to guess the word. I wanted to see whether an LLM could be more efficient in solving the puzzle given that the game is AI-powered.</p>
+<section id="method" class="level3">
+<h3 class="anchored" data-anchor-id="method">Method</h3>
+<p>I chose the <em>Semantle</em> of 9/21/2025, or puzzle #1331, as the subject of this challenge. <em>If you’re interested in trying the challenge out for yourself first, I’d recommend pausing now to complete it before coming back to this blog.</em> I timed myself and recorded the number of attempts it took for me to guess the correct word. This number would be the number of attempts AI has to guess the word to win the game-if it takes longer, I win.</p>
+<p>For the LLM, I chose the gpt-4o model as my opponent. I gave the following prompt to gpt-4o to have it partake in this game:</p>
+<blockquote class="blockquote">
+<p>You are playing a game of Semantle. Please give a word based on the output I give you from the official semantle website. As stated in the website, “The nearest word has a similarity of 63.97, the tenth-nearest has a similarity of 38.98 and the thousandth nearest word has a similarity of 18.71.” Given this, give me a word to start the game.</p>
+</blockquote>
+</section>
+<section id="my-attempt" class="level3">
+<h3 class="anchored" data-anchor-id="my-attempt">My Attempt</h3>
+<p>I attempted the puzzle first to avoid bias when I ran the simulation in the LLM. This attempt took me 17 minutes and 33 seconds and I had 104 total guesses.</p>
+<p>As a semi-experienced <em>Semantle</em> player, many of my first guesses were words that didn’t have much relation to each other. I was trying to cast a wide net to see what would trigger a high similarity word. Then, as I got my first thousandth nearest word, “place” at 18/1000 in similarity, I turned to words that may literally, metaphorically, and otherwise by some association related to the word or idea of “place” (e.g.&nbsp;fire, home, belong, school).</p>
+<p>Then, I reached my second thousandth nearest word in my 54th guess, “there” (313/1000). From here on, I tried to think of synonyms and other words relating to the idea of location. Then I moved onto prepositions, where I finally landed my final guess and the word of the day, “up.”</p>
+<hr>
+<div>
+<p><img src="Semantle_files/figure-html/fb4a9f88-f5eb-4ccf-a5a7-fa1be94a3696-3-b284737f-3621-4f64-8368-56407f21d5fe.png" img="" align="top" width="300"> <img src="Semantle_files/figure-html/fb4a9f88-f5eb-4ccf-a5a7-fa1be94a3696-1-4330eb9d-f759-4d6f-82d1-76c49a5f4df6.png" img="" align="top" width="330"> <img src="Semantle_files/figure-html/fb4a9f88-f5eb-4ccf-a5a7-fa1be94a3696-2-91208819-ac03-4951-9f22-ce79b20fe9e9.png" img="" align="top" width="300"></p>
+</div>
+</section>
+<section id="gpt-4os-attempt" class="level3">
+<h3 class="anchored" data-anchor-id="gpt-4os-attempt">GPT-4o’s Attempt</h3>
+<p>The gpt-4o model defied my expectations–in the worst ways possible. In the beginning it started quite strong, guessing a variety of words to “try a different, unrelated category to explore a different direction” as said in its own words. Then, all of a sudden, all words relating to “furniture” (10.32% similarity) became a subject of focus for its “high similarity” despite precious inputs such as “weather” and “book” having just as high, if not higher, of a similarity score.</p>
+<blockquote class="blockquote">
+<p>With a score of 10.32 for “furniture,” it suggests we might be in the realm of physical objects. Let’s narrow down more specific items and try the word “chair.”</p>
+</blockquote>
+<p>From then on, gpt-4o is stuck guessing words that are very similar in concept–often within the category or a synonym or exchangeable word of the <em>high scoring word</em>. During this process, gpt-4o also began repeating the same word several times–despite my continual demand to not repeat words.</p>
+<p>Ultimately, not only did gpt-4o not guess the word, but the process of generating a new word and navigating between the two platforms for this experiment took a whopping 26 minutes and 15 seconds. Talk about inefficient.</p>
+<hr>
+<div>
+<p><img src="Semantle_files/figure-html/f6e5efa2-a657-4428-adaa-d92b999d6398-1-49ba0dd0-21b1-4766-9164-4b6c972cad33.png" img="" align="top" width="300"> <img src="Semantle_files/figure-html/f6e5efa2-a657-4428-adaa-d92b999d6398-3-f74b0157-9fd8-4f58-8a02-06db17666cac.png" img="" align="top" width="300"> <img src="Semantle_files/figure-html/f6e5efa2-a657-4428-adaa-d92b999d6398-2-52222cc4-2161-4166-a8cc-3bb773f25452.png" img="" align="top" width="300"></p>
+</div>
+</section>
+<section id="reflection" class="level3">
+<h3 class="anchored" data-anchor-id="reflection">Reflection</h3>
+<p>Perhaps AI is not as creative as we thought. I initially believed that LLMs like gpt-4o would be more efficient in solving puzzles like these since not only was the puzzle generated by AI, but I thought that gpt-4o would be able to learn and navigate through the puzzle and understand the algorithm as it went. However, perhaps it did not “think” to understand the algorithm but rather quite literally play the game and simply guessed words as it was given. If given a list of similarity scores, there is a chance gpt-4o would be able to reverse engineer the scores and understand the algorithm and train itself to solve these puzzles better. However, that would only mean giving it specialized training data to concentrate its skills into solving these puzzles. To me, this shows the limitations of LLMs as they don’t have the same “out of box” thinking that humans who construct AI and these puzzles have. While <em>Semantle</em> is AI-calculated, it seems that it’s not entirely AI-solveable yet.</p>
 
 
 </section>
