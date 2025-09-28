@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Lindsey">
-<meta name="dcterms.date" content="2025-09-21">
-<meta name="description" content="Can AI beat me in a game of Semantle?">
+<meta name="author" content="Lindsey Lee">
+<meta name="dcterms.date" content="2025-09-25">
+<meta name="description" content="This is an exploratory post to create blog post images!">
 
-<title>Human vs.&nbsp;AI: a Game of Semantle – Lindsey Lee - Explorations with LLMs</title>
+<title>Making Thumbnail Images with LLMs (Pt. 1) – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,15 +110,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Human vs.&nbsp;AI: a Game of Semantle</h1>
+      <h1 class="title">Making Thumbnail Images with LLMs (Pt. 1)</h1>
                   <div>
         <div class="description">
-          Can AI beat me in a game of Semantle?
+          This is an exploratory post to create blog post images!
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
                 <div class="quarto-category">Fun</div>
+                <div class="quarto-category">Creative</div>
+                <div class="quarto-category">Prompting</div>
               </div>
                   </div>
   </div>
@@ -129,14 +131,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Lindsey </p>
+               <p>Lindsey Lee </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 21, 2025</p>
+        <p class="date">September 25, 2025</p>
       </div>
     </div>
     
@@ -157,53 +159,94 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Semantle_files/figure-html/04211054-75c4-469f-abf2-4da26024d18f-1-5a08d23a-679c-4323-9808-998fc937c9d8.png" class="img-fluid figure-img"></p>
-<figcaption>Gemini_Generated_Image_klpxqmklpxqmklpx.png</figcaption>
+<p><img src="MAscot_files/figure-html/a7b95cd3-0afa-4d85-a115-7f1079497582-1-bb59122d-7146-4817-b0a2-060dabf77d4d.png" class="img-fluid figure-img"></p>
+<figcaption>Gemini_Generated_Image_6pqbf76pqbf76pqb.png</figcaption>
 </figure>
 </div>
-<p><em>Semantle</em> is a daily online word puzzle where players try to guess a secret word not by letters, but by meaning. Each guess is scored based on its semantic similarity to the target word. Taken from the <em>Semantle</em> website,</p>
+<p>Inspired by one of the previous student’s snoopy themed blog posts, I was brainstorming a character I liked that I could use as a blog post mascot. I wanted to include this mascot, in some format relevant to the content, in every thumbnail image of my blog posts. As a big lover of the character <strong>Miffy</strong>, created by Dutch artist Dick Bruna, I decided to select her as my LLM blog mascot.</p>
+<p>This then leads to the task of generating thumbnail images with the use of my choice of image-generating LLM, gpt-5. I first used gpt-5 to generate an image prompt, revised it, and generated an image. I gave the following general prompt to generate an image prompt:</p>
 <blockquote class="blockquote">
-<p>“Unlike other word games, this game is not about spelling; it’s about meaning. We calculate this meaning using artificial intelligence (specifically word2vec technology).</p>
-<p>In word2vec, each word has a measurable semantic distance from another, indicating their level of relatedness. Once you get within one thousand words of the secret word, we will tell you in the proximity column.”</p>
-<div style="text-align: right;">
-<p>Semantle, https://semantle.com/faq</p>
-</div>
+<p>Please write me an image prompt that would be generate an image including two elements:</p>
+<ul>
+<li><p>the dutch character miffy</p></li>
+<li><p>anything relating to [blog post content]</p></li>
+</ul>
 </blockquote>
-<p>In this game, there are no hints about letters–the only information given being the similarity of the nearest, tenth nearest, and thousandth nearest word. Only the abstract closeness of ideas in the logic of the AI model applies to guess the word. I wanted to see whether an LLM could be more efficient in solving the puzzle given that the game is AI-powered.</p>
-<section id="method" class="level3">
-<h3 class="anchored" data-anchor-id="method">Method</h3>
-<p>I chose the <em>Semantle</em> of 9/21/2025, or puzzle #1331, as the subject of this challenge. <em>If you’re interested in trying the challenge out for yourself first, I’d recommend pausing now to complete it before coming back to this blog.</em> I timed myself and recorded the number of attempts it took for me to guess the correct word. This number would be the number of attempts AI has to guess the word to win the game-if it takes longer, I win.</p>
-<p>For the LLM, I chose the gpt-4o model as my opponent. I gave the following prompt to gpt-4o to have it partake in this game:</p>
-<blockquote class="blockquote">
-<p>You are playing a game of Semantle. Please give a word based on the output I give you from the official semantle website. As stated in the website, “The nearest word has a similarity of 63.97, the tenth-nearest has a similarity of 38.98 and the thousandth nearest word has a similarity of 18.71.” Given this, give me a word to start the game.</p>
-</blockquote>
-</section>
-<section id="my-attempt" class="level3">
-<h3 class="anchored" data-anchor-id="my-attempt">My Attempt</h3>
-<p>I attempted the puzzle first to avoid bias when I ran the simulation in the LLM. This attempt took me 17 minutes and 33 seconds and I had 104 total guesses.</p>
-<p>As a semi-experienced <em>Semantle</em> player, many of my first guesses were words that didn’t have much relation to each other. I was trying to cast a wide net to see what would trigger a high similarity word. Then, as I got my first thousandth nearest word, “place” at 18/1000 in similarity, I turned to words that may literally, metaphorically, and otherwise by some association related to the word or idea of “place” (e.g.&nbsp;fire, home, belong, school).</p>
-<p>Then, I reached my second thousandth nearest word in my 54th guess, “there” (313/1000). From here on, I tried to think of synonyms and other words relating to the idea of location. Then I moved onto prepositions, where I finally landed my final guess and the word of the day, “up.”</p>
+<section id="personal-color-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="personal-color-analysis">1. Personal Color Analysis</h3>
 <hr>
-<div>
-<p><img src="Semantle_files/figure-html/fb4a9f88-f5eb-4ccf-a5a7-fa1be94a3696-3-b284737f-3621-4f64-8368-56407f21d5fe.png" img="" align="top" width="300"> <img src="Semantle_files/figure-html/fb4a9f88-f5eb-4ccf-a5a7-fa1be94a3696-1-4330eb9d-f759-4d6f-82d1-76c49a5f4df6.png" img="" align="top" width="330"> <img src="Semantle_files/figure-html/fb4a9f88-f5eb-4ccf-a5a7-fa1be94a3696-2-91208819-ac03-4951-9f22-ce79b20fe9e9.png" img="" align="top" width="300"></p>
+<p>Starting with my first blog post, I asked gpt-5 for a prompt that would generate an image appropriate for a blog post about personal color analysis. It gave the following output:</p>
+<blockquote class="blockquote">
+<p>A cute illustration of the Dutch character Miffy sitting at a table surrounded by colorful fashion swatches, paint palettes, and fabric samples. Miffy is curiously comparing colors, as if doing a personal color analysis. The scene feels light, minimalist, and playful, with soft pastel tones and clean lines, staying true to Miffy’s simple, charming style.</p>
+</blockquote>
+<p>I then modified this prompt and generated the following image:</p>
+<blockquote class="blockquote">
+<p>Please generate a cute illustration of the Dutch character Miffy sitting at a table surrounded by colorful fashion swatches, paint palettes, and fabric samples. Miffy is curiously comparing colors, as if doing a personal color analysis. The scene feels light, minimalist, and playful, with soft pastel tones and clean lines, staying true to Miffy’s simple, charming style. This image should be appropriate for a blog post thumbnail and should be a square in size.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MAscot_files/figure-html/b382e0cf-9f17-4093-bc07-703c77714ef7-1-024d3e28-b6ef-488a-9414-54f6da777192.png" class="img-fluid figure-img"></p>
+<figcaption>ChatGPT Image Sep 28, 2025, 11_50_46 AM.png</figcaption>
+</figure>
 </div>
 </section>
-<section id="gpt-4os-attempt" class="level3">
-<h3 class="anchored" data-anchor-id="gpt-4os-attempt">GPT-4o’s Attempt</h3>
-<p>The gpt-4o model defied my expectations–in the worst ways possible. In the beginning it started quite strong, guessing a variety of words to “try a different, unrelated category to explore a different direction” as said in its own words. Then, all of a sudden, all words relating to “furniture” (10.32% similarity) became a subject of focus for its “high similarity” despite precious inputs such as “weather” and “book” having just as high, if not higher, of a similarity score.</p>
+<section id="healthcare-diagnosis" class="level3">
+<h3 class="anchored" data-anchor-id="healthcare-diagnosis">2. Healthcare Diagnosis</h3>
+<p>My next blog post was about using an LLM to diagnose my symptoms, and when I used gpt-5 to generate a prompt, it gave me the following:</p>
 <blockquote class="blockquote">
-<p>With a score of 10.32 for “furniture,” it suggests we might be in the realm of physical objects. Let’s narrow down more specific items and try the word “chair.”</p>
+<p>A minimalist, cute illustration of the Dutch character Miffy dressed as a doctor, wearing a white coat and holding a stethoscope. Next to her is a medical chart with simple drawings. The style is clean, playful, and child-friendly, with soft pastel colors and bold outlines that stay true to Miffy’s original design.</p>
 </blockquote>
-<p>From then on, gpt-4o is stuck guessing words that are very similar in concept–often within the category or a synonym or exchangeable word of the <em>high scoring word</em>. During this process, gpt-4o also began repeating the same word several times–despite my continual demand to not repeat words.</p>
-<p>Ultimately, not only did gpt-4o not guess the word, but the process of generating a new word and navigating between the two platforms for this experiment took a whopping 26 minutes and 15 seconds. Talk about inefficient.</p>
-<hr>
-<div>
-<p><img src="Semantle_files/figure-html/f6e5efa2-a657-4428-adaa-d92b999d6398-1-49ba0dd0-21b1-4766-9164-4b6c972cad33.png" img="" align="top" width="300"> <img src="Semantle_files/figure-html/f6e5efa2-a657-4428-adaa-d92b999d6398-3-f74b0157-9fd8-4f58-8a02-06db17666cac.png" img="" align="top" width="300"> <img src="Semantle_files/figure-html/f6e5efa2-a657-4428-adaa-d92b999d6398-2-52222cc4-2161-4166-a8cc-3bb773f25452.png" img="" align="top" width="300"></p>
+<p>I then revised it as:</p>
+<blockquote class="blockquote">
+<p>Please generate a minimalist, cute illustration of the Dutch character Miffy dressed as a doctor, wearing a white coat and holding a stethoscope. Next to her is a medical chart with simple drawings. The style is clean, playful, and child-friendly, with soft pastel colors and bold outlines that stay true to Miffy’s original design. This image should be appropriate for a blog post thumbnail and should be a square in size.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MAscot_files/figure-html/22b2b01a-9788-4b1e-97b2-554f5343f476-1-44968695-da12-4b2a-8544-52409f36379f.png" class="img-fluid figure-img"></p>
+<figcaption>ChatGPT Image Sep 28, 2025, 12_38_23 PM.png</figcaption>
+</figure>
 </div>
+</section>
+<section id="madlibs" class="level3">
+<h3 class="anchored" data-anchor-id="madlibs">3. Madlibs</h3>
+<p>Then, I generated a prompt regarding my blog post about Madlibs:</p>
+<blockquote class="blockquote">
+<p>A playful, minimalist illustration of the Dutch character Miffy sitting at a small desk with a pencil, happily filling out a Mad Libs–style word game. Around Miffy float large, simple word bubbles with fun parts of speech like ‘noun,’ ‘verb,’ and ‘adjective.’ The style is clean and charming, with bold outlines and bright, primary colors, staying true to Miffy’s original design.</p>
+</blockquote>
+<p>I revised it as:</p>
+<blockquote class="blockquote">
+<p>Please generate a playful, minimalist illustration of the Dutch character Miffy sitting at a small desk with a pencil, happily filling out a Mad Libs–style word game. Around Miffy float large, simple word bubbles with fun parts of speech like ‘noun,’ ‘verb,’ and ‘adjective.’ The style is clean and charming, with bold outlines and bright, primary colors, staying true to Miffy’s original design. This image should be appropriate for a blog post thumbnail and should be a square in size.</p>
+</blockquote>
+<p>This generated the image:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MAscot_files/figure-html/ac77a5b7-6f7c-4c60-b6b5-528eacfaf8e9-1-f1a97950-7cc6-4ac6-af57-ceeaae766480.png" class="img-fluid figure-img"></p>
+<figcaption>ChatGPT Image Sep 28, 2025, 12_43_11 PM.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="action-figure-generation" class="level3">
+<h3 class="anchored" data-anchor-id="action-figure-generation">4. Action Figure Generation</h3>
+<p>Gpt-5 generated the following prompt:</p>
+<blockquote class="blockquote">
+<p>A whimsical, minimalist illustration of the Dutch character Miffy sitting at a small workbench, carefully assembling her own Miffy action figure. On the table are tiny toy parts, paint jars, and simple tools, all drawn in a clean, childlike style. Next to her is a finished toy box with the completed Miffy action figure inside, featuring bright, simple packaging. The overall look is playful, charming, and true to Miffy’s original bold-lined design.</p>
+</blockquote>
+<p>Then, it was revised as:</p>
+<blockquote class="blockquote">
+<p>Please generate a whimsical, minimalist illustration of the Dutch character Miffy sitting at a small workbench, carefully assembling her own Miffy action figure. On the table are tiny toy parts, paint jars, and simple tools, all drawn in a clean, childlike style. Next to her is a finished toy box with the completed Miffy action figure inside, featuring bright, simple packaging. The overall look is playful, charming, and true to Miffy’s original bold-lined design. This image should be appropriate for a blog post thumbnail and should be a square in size.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MAscot_files/figure-html/a5acab8a-5728-4436-89ea-ae4bed2d77b5-1-15a554ad-7b60-4f97-9333-5936bdb6d2a3.png" class="img-fluid figure-img"></p>
+<figcaption>miffy.png</figcaption>
+</figure>
+</div>
+<hr>
 </section>
 <section id="reflection" class="level3">
 <h3 class="anchored" data-anchor-id="reflection">Reflection</h3>
-<p>Perhaps AI is not as creative as we thought. I initially believed that LLMs like gpt-4o would be more efficient in solving puzzles like these since not only was the puzzle generated by AI, but I thought that gpt-4o would be able to learn and navigate through the puzzle and understand the algorithm as it went. However, perhaps it did not “think” to understand the algorithm but rather quite literally play the game and simply guessed words as it was given. If given a list of similarity scores, there is a chance gpt-4o would be able to reverse engineer the scores and understand the algorithm and train itself to solve these puzzles better. However, that would only mean giving it specialized training data to concentrate its skills into solving these puzzles. To me, this shows the limitations of LLMs as they don’t have the same “out of box” thinking that humans who construct AI and these puzzles have. While <em>Semantle</em> is AI-calculated, it seems that it’s not entirely AI-solveable yet.</p>
+<p>I believe these four images were generated successfully! The artistic ability of LLMs to put together images based on just a few descriptive sentences is pretty remarkable. It was also efficient and intruiging to see how gpt-5 would generate its own image prompt to fuel its own image creation. Perhaps due to the strong branding of Miffy online and the help of using gpt-5 to create the prompts, the style of image generation has been generally consistent with the exception of a few stylistic differences (black versus brown lineart, the color of Miffy’s shirt, etc). This process really showcases how AI can bridge imagination and execution in a playful, accessible way.</p>
+<p>In the next set of thumbnail image creations, I would like to compare the generations of other models. I’ve only ever used the ChatGPT models to generate images, so I’d like to branch out and experiment with other model to determine what would be most appropriate for my blog images. I also would like to generate the thumbnail image for this blog post by comparing other models!</p>
 
 
 </section>

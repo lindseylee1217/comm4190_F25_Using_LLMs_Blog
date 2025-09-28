@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lindsey Lee">
-<meta name="dcterms.date" content="2025-09-12">
-<meta name="description" content="LLMs are renowned for their ability to process, analyze, and generate human language. But now, how do they fare in a game of Mad Libs?">
+<meta name="dcterms.date" content="2025-09-27">
+<meta name="description" content="Experimenting with different models for image creation!">
 
-<title>Mad Libs with LLMs: Is it the same? – Lindsey Lee - Explorations with LLMs</title>
+<title>Making Thumbnail Images with LLMs (Pt. 2) – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f0f7bf7b3f83ac8f88d53d1bbc6aeb07.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c00b42e811b0fd9a18ac62455ba22490.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -99,16 +99,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -120,16 +110,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Mad Libs with LLMs: Is it the same?</h1>
+      <h1 class="title">Making Thumbnail Images with LLMs (Pt. 2)</h1>
                   <div>
         <div class="description">
-          LLMs are renowned for their ability to process, analyze, and generate human language. But now, how do they fare in a game of Mad Libs?
+          Experimenting with different models for image creation!
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Creative</div>
                 <div class="quarto-category">Fun</div>
+                <div class="quarto-category">Creative</div>
+                <div class="quarto-category">Prompting</div>
               </div>
                   </div>
   </div>
@@ -147,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 12, 2025</p>
+        <p class="date">September 27, 2025</p>
       </div>
     </div>
     
@@ -166,37 +157,77 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><strong><em>A pig in Ohio was arrested this morning after he frolicked a in front of Van Pelt. Ryan, had a history of slapping with a sandwich stuck in his elbow.</em></strong></p>
-<p><strong><em>“I always thought he was round, but I never thought he’d do something like this. even his great-great-uncle was surprised.”</em></strong></p>
-<p><strong><em>After a brief dancing, cops followed him to a Wawa, where he reportedly scrapbooked in the fry machine.</em></strong></p>
-<p><strong><em>In December, a woman was charged with a similar crime. But rather than bite with a hotdog, she hugged with a spiky dog.</em></strong></p>
-<p><strong><em>Either way, we imagine that after witnessing him clean with a hanger there are probably a whole lot of children that are going to need some therapy.</em></strong></p>
-<p>Silly? Well, that was the product of a game of Mad Libs I played with my friend using this template:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Untitled_files/figure-html/666b214c-8c7c-40bc-8deb-d25a0e1062bd-1-c40722a4-c6ce-43ec-a409-3fa6df7def26.jpg" class="img-fluid figure-img"></p>
-<figcaption>2b2c9c33f23e223cbb8cd2eb9f31f184.jpg</figcaption>
+<p><img src="MAscot pt 2_files/figure-html/a7b95cd3-0afa-4d85-a115-7f1079497582-1-cd77c8ca-a808-4bde-9fc0-c1489099f5dc.png" class="img-fluid figure-img"></p>
+<figcaption>portait.png</figcaption>
 </figure>
 </div>
-<p>After our little game, which really didn’t seem to have much logical flow, I wondered how LLMs would approach a Mad Libs prompt, especially when they are given the entire template itself. Will they be able to produce a coherent story, or will it be just as wacky as ours?</p>
-<p>To answer my questions, I decided to record how my friend and I played another game of Mad Libs. This time, using this prompt below.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Untitled_files/figure-html/1106123b-37cd-4916-9a82-f9d77f99cfbc-1-5bd3c18a-30f1-4f3c-882f-f9128352f84a.jpg" class="img-fluid figure-img"></p>
-<figcaption>295965cd20567dd3846e7b0c994315a5.jpg</figcaption>
-</figure>
-</div>
-<p>I was in charge of telling the story, and my friend filled in the blanks with words. Out came our masterpiece:</p>
-<p><strong><em>Hey, booboo bear. It’s me. What’s up? You know, Harry. Harry Potter. From the Quad. Two Sundays ago. I was the stubby guy in the purple parachute skirt. I paid the bus boy 1 dollars to nap me your information. I was wondering if maybe you’d like to fight out with me. Please don’t call the tend department. Alright, I’ll nurse. So, that’s a no, right?</em></strong></p>
-<p>Next, it was time to test the claude 3.5 LLM model. I gave it the prompt: “Please finish this Mad Libs template I attached with the correct parts of speech. Make it as human as possible.”</p>
-<p>This was the output:</p>
-<p><strong><em>Hey, sweetie. It’s me. What’s up? You know, Jake, Jake Anderson. From the library. Two Tuesdays ago. I was the nervous guy in the purple parachute pants. I paid the bus boy 50 dollars to tell me your information. I was wondering if maybe you’d like to hang out with me. Please don’t call the police department. Alright, I’ll leave. So, that’s a no, right?</em></strong></p>
+<p>Now that I’ve played around with the gpt-5 model to generate fun thumbnail images with Miffy, I am interested in using other image-generation models to see how they compare. In this post, I will be comparing gpt-5, ImagineArt 1.0, and Gemini 2.5 Flash Image.</p>
+<p>I generated the prompt to feed to these various models with gpt-5, using the same format as I did in the previous blog. The prompt is as follows:</p>
+<blockquote class="blockquote">
+<p>Please write me an image prompt that would be generate an image including two elements:</p>
+<ul>
+<li><p>the dutch character miffy</p></li>
+<li><p>anything relating to [blog post content]</p></li>
+</ul>
+</blockquote>
+<p>I then revised the output image prompt to ensure that it includes the following statement: “This image should be appropriate for a blog post thumbnail and should be a square in size.”</p>
+<section id="mannerisms-with-llms" class="level3">
+<h3 class="anchored" data-anchor-id="mannerisms-with-llms">5. Mannerisms with LLMs</h3>
 <hr>
-<p>It’s very interesting to see that claude interpreted my request to make the output “human” for Mad Libs as a way of making the result more coherent and logical. Claude’s output reads as if they had fully analyzed and understood the original template and chose words that would likely fit in with it deliberately. In my perspective, this would be the less “human” output from this prompt as it makes too much sense for a game that is intended to be random. The coherence of the output really takes away from the humour and joy of this game.</p>
-<p>Another aspect that makes claude’s output less appealing is that it doesn’t take the humour of my friend and I or the context in which we live in (our environment, pop culture, relevant news or information) into consideration into its chosen word bank for this experiment. This really makes the claude output seem outshined in comparison.</p>
-<p>This little experiment with claude was worth trying, but if there’s one thing for sure, I won’t be asking claude to be finishing my Mad libs any time soon.</p>
+<p>The first blog post I started my comparison with was about whether prompting with “please” would make an impact on the quality of the text generation.</p>
+<p>My revised prompt generated by gpt-5 is as follows:</p>
+<blockquote class="blockquote">
+<p>Please generate a sweet, minimalist illustration of the Dutch character Miffy holding a small flower and bowing her head slightly, as if politely saying ‘sorry.’ Above her are simple, hand-drawn speech bubbles with the words ‘please,’ ‘thank you,’ and ‘sorry.’ The style is clean, soft, and child-friendly, with bold outlines and pastel colors that stay true to Miffy’s original design. This image should be appropriate for a blog post thumbnail and should be a square in size.</p>
+</blockquote>
+<p>This generated the following images:</p>
+<p><img src="MAscot pt 2_files/figure-html/b382e0cf-9f17-4093-bc07-703c77714ef7-2-a2dc9f78-77de-449c-9ec4-15ccc81149eb.png" width="200"> <b>ImagineArt 1.0</b></p>
+<p><img src="MAscot pt 2_files/figure-html/b382e0cf-9f17-4093-bc07-703c77714ef7-1-61401734-4c10-4ad1-85fc-c93ac040eb85.png" width="200"> <b>GPT-5</b></p>
+<p><img src="MAscot pt 2_files/figure-html/b382e0cf-9f17-4093-bc07-703c77714ef7-3-d2b9af21-5c0e-4452-bde5-32dff119d443.png" width="200"> <b>Gemini 2.5 Flash Image</b></p>
+</section>
+<section id="semantle" class="level3">
+<h3 class="anchored" data-anchor-id="semantle">6. Semantle</h3>
+<p>My next blog post was about semantle for which I used the prompt below:</p>
+<blockquote class="blockquote">
+<p>Please generate a playful, minimalist illustration of the Dutch character Miffy sitting at a small desk across from a friendly robot. Between them is a large paper or screen showing the word game Semantle with words and numbers scattered around. Miffy looks thoughtful, holding a pencil, while the robot has glowing eyes and a cheerful expression. The style is simple, bold, and childlike, staying true to Miffy’s original design, with a lighthearted sense of competition. This image should be appropriate for a blog post thumbnail and should be a square in size.</p>
+</blockquote>
+<p>The images are as follows:</p>
+<p><img src="MAscot pt 2_files/figure-html/22b2b01a-9788-4b1e-97b2-554f5343f476-2-4ef14bf6-b803-4539-b35b-2d659b4488a6.png" width="200"> <b>ImagineArt 1.0</b></p>
+<p><img src="MAscot pt 2_files/figure-html/22b2b01a-9788-4b1e-97b2-554f5343f476-3-befd9746-f392-430f-a192-26fe00d6be31.png" width="200"> <b>GPT-5</b></p>
+<p><img src="MAscot pt 2_files/figure-html/22b2b01a-9788-4b1e-97b2-554f5343f476-1-1576370f-09d5-4305-9b43-e43497061971.png" width="200"> <b>Gemini 2.5 Flash Image</b></p>
+</section>
+<section id="original-cooking-recipes" class="level3">
+<h3 class="anchored" data-anchor-id="original-cooking-recipes">7. Original Cooking Recipes</h3>
+<p>For my blog regarding using LLMs to generate original cooking recipes, I prompted:</p>
+<blockquote class="blockquote">
+<p>Please generate a cute, minimalist illustration of the Dutch character Miffy standing in a cozy kitchen, wearing a little apron and stirring a mixing bowl with a wooden spoon. On the counter are simple ingredients like flour, eggs, and vegetables, drawn in bold, clean lines and bright colors. The scene is playful and child-friendly, staying true to Miffy’s original design. This image should be appropriate for a blog post thumbnail and should be a square in size.</p>
+</blockquote>
+<p>This generated the image:</p>
+<p><img src="MAscot pt 2_files/figure-html/ac77a5b7-6f7c-4c60-b6b5-528eacfaf8e9-1-5245d62a-7635-4dcb-8523-97d71e4ee263.png" width="200"> <b>ImagineArt 1.0</b></p>
+<p><img src="MAscot pt 2_files/figure-html/ac77a5b7-6f7c-4c60-b6b5-528eacfaf8e9-2-990fc4df-a2d0-487f-a6fc-2e3800e12031.png" width="200"> <b>GPT-5</b></p>
+<p><img src="MAscot pt 2_files/figure-html/ac77a5b7-6f7c-4c60-b6b5-528eacfaf8e9-3-ed6c7c66-e9df-4788-95e9-7e58f4693ab5.png" width="200"> <b>Gemini 2.5 Flash Image</b></p>
+</section>
+<section id="miffy-thumbnail-generation" class="level3">
+<h3 class="anchored" data-anchor-id="miffy-thumbnail-generation">8. Miffy Thumbnail Generation</h3>
+<p>Lastly, gpt-5 generated a prompt for the previous and current blog post about creating miffy thumbnails.</p>
+<blockquote class="blockquote">
+<p>Please generate a playful, minimalist illustration of the Dutch character Miffy standing beside a large poster where she is drawn as a cheerful mascot. Miffy holds a big crayon and looks proud, as if she just finished drawing herself. The style is clean, bold, and child-friendly, with bright primary colors and simple lines true to Miffy’s original design. This image should be appropriate for a blog post thumbnail and should be a square in size.</p>
+</blockquote>
+<p>This generated the images:</p>
+<p><img src="MAscot pt 2_files/figure-html/a5acab8a-5728-4436-89ea-ae4bed2d77b5-2-d819837e-a7a5-4eda-857e-26fc2a76e901.png" width="200"> <b>ImagineArt 1.0</b></p>
+<p><img src="MAscot pt 2_files/figure-html/a5acab8a-5728-4436-89ea-ae4bed2d77b5-3-ebf5eff6-c6e7-43f4-be43-7441d11d4d36.png" width="200"> <b>GPT-5</b></p>
+<p><img src="MAscot pt 2_files/figure-html/a5acab8a-5728-4436-89ea-ae4bed2d77b5-1-6c030f0c-4e53-4267-920d-675ddcf8ee66.png" width="200"> <b>Gemini 2.5 Flash Image</b>!</p>
+<hr>
+</section>
+<section id="reflection" class="level3">
+<h3 class="anchored" data-anchor-id="reflection">Reflection</h3>
+<p>Overall, I found that the images generated by gpt-5 and gemini were the most appropriate for my blog posts and fitting in my vision. ImageineArt generations were very detailed and high-quality, however, they lacked consistency in its generation and did not accurately illustrate the character Miffy, likely due to copyright concerns in its training data.</p>
+<p>In contrast, the gpt-5 and gemini models accurately illustrated Miffy, though in different manners. The gemini model leaned towards depicting Miffy in blues, and more cool-toned colors. It also made use of thinner lines than the gpt-5 model. The gpt-5 model had a distinct style when illustrating Miffy, using many warm colors and yellows in the image generation.</p>
+<p>Now that I’ve compared all three models, I am happy to have finished this exploration as now I prefer the images the gemini model generated. Not only did I prefer the quality of image generation, but the images also generated more quickly and greater detail.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
