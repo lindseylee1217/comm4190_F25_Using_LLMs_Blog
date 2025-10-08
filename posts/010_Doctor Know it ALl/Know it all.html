@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="An LLM User">
-<meta name="dcterms.date" content="2024-02-02">
-<meta name="description" content="An example post from a Jupyter notebook">
+<meta name="author" content="Lindsey Lee">
+<meta name="dcterms.date" content="2025-10-02">
+<meta name="description" content="Experimenting with different models for image creation!">
 
-<title>A test post – Lindsey Lee - Explorations with LLMs</title>
+<title>Playing Dr.&nbsp;Know it All with LLM – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,16 +110,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">A test post</h1>
+      <h1 class="title">Playing Dr.&nbsp;Know it All with LLM</h1>
                   <div>
         <div class="description">
-          An example post from a Jupyter notebook
+          Experimenting with different models for image creation!
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">prompting</div>
-                <div class="quarto-category">logic</div>
+                <div class="quarto-category">Fun</div>
+                <div class="quarto-category">Prompting</div>
               </div>
                   </div>
   </div>
@@ -130,14 +130,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>An LLM User </p>
+               <p>Lindsey Lee </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 2, 2024</p>
+        <p class="date">October 2, 2025</p>
       </div>
     </div>
     
@@ -156,53 +156,325 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="a-visualization-problem-for-llms" class="level2">
-<h2 class="anchored" data-anchor-id="a-visualization-problem-for-llms">A visualization problem for LLMs</h2>
-<ul>
-<li>Read the following and see if you can answer the question:</li>
-</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Know it all_files/figure-html/a7b95cd3-0afa-4d85-a115-7f1079497582-1-2158f1f3-2d9e-4a85-a192-bdcdeae5cf64.png" class="img-fluid figure-img"></p>
+<figcaption>dr know it all.png</figcaption>
+</figure>
+</div>
+<hr>
+<p>Inspired by our in-class activity, I decided to play the game “Dr Know it all” with the anthropic/claude-3.5-sonnet model. I first used claude to generate two questions for this activity. To generate the questions, I asked:</p>
 <blockquote class="blockquote">
-<p>There are three boxes in a stack. A pink one, a purple one and a green one. The pink one is in the middle of the stack with the purple below it. What is the color of the box on the bottom of the stack?</p>
+<p><strong>USER</strong></p>
+<p>Please optimize the following prompt: Give me two questions to ask in a game of “Dr Know it All.”</p>
+<p><strong>ASSISTANT</strong></p>
+<p>“Provide 2 creative and challenging questions suitable for the party game ‘Dr.&nbsp;Know-It-All’ where multiple players must work together to answer one word at a time. Questions should be complex enough to be entertaining but not impossible to answer.”</p>
+<p><strong>USER</strong></p>
+<p>Provide 2 fun and creative questions suitable for the party game ‘Dr.&nbsp;Know-It-All’ where multiple players must work together to answer one word at a time. Questions should be complex enough to be entertaining but not impossible to answer.</p>
+<p><strong>ASSISTANT</strong></p>
+<p>Here are 2 entertaining questions for Dr.&nbsp;Know-It-All: 1. “Why do flamingos stand on one leg while sleeping?” (This can lead to hilarious explanations involving balance, temperature, or made-up flamingo customs) 2. “What happens inside a washing machine when clothes mysteriously lose their socks?” (This everyday mystery can generate creative and funny responses about sock adventures)</p>
 </blockquote>
-<p>Most likely you answered <strong>purple</strong>…</p>
-<p>But it is possible you first said <strong>green</strong> (don’t worry if you did it is quite a common response!)</p>
-<section id="how-do-we-do-it" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-we-do-it">How do we do it?</h3>
-<p>It’s a verbal visual problem that requires some deliberation and most likely for us to create a visual image of a stack of boxes as a reasoning aid.</p>
-<p>Notice also the complexity of the language used in the prompt to describe the scene. The use of natural language as opposed to a formal/logical calculus does hold the potential for ambiguity (multiple interpretations) and inexactness. However, it is the most normal/natural, efficient and broadly accessible way of communicating such information.</p>
-<p><strong>Notice</strong> 1. The use of <em>anaphor</em> or <em>reference</em>. - <code>Three BOXES -&gt; a pink/purple/green ONE</code> as opposed to <code>a pink box, a purple box and a green box</code>. - <code>The PINK ONE is in the middle ... the purple</code> {BOX} <code>below IT</code> {the pink box}</p>
-<pre><code>We tend to try and avoid this kind of repetition to make our speech more coherent.</code></pre>
-<ol start="2" type="1">
-<li>Although the description in language may not be entirely concise, there is no real ambiguity as to how the boxes can be arranged. It must be: | Box | Stack position | | — | — | | GREEN | top | | PINK | middle | | PURPLE | bottom |</li>
-</ol>
+<hr>
+<section id="flamingos" class="level2">
+<h2 class="anchored" data-anchor-id="flamingos">1. Flamingos</h2>
+<p>I generated the following output from the game:</p>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>We are going to play a game of Dr.&nbsp;Know it all where multiple players must work together to answer a question one word at a time. The question is “Why do flamingos stand on one leg while sleeping?” My first word is “well’“</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll play along and add the next word to help answer why flamingos stand on one leg while sleeping.</p>
+<p>“Well, flamingos…”</p>
+<p>(I’ve added “flamingos” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>stand</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer one word at a time:</p>
+<p>“Well, flamingos stand on…”</p>
+<p>(I’ve added “on” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>one</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer one word at a time:</p>
+<p>“Well, flamingos stand on one leg…”</p>
+<p>(I’ve added “leg” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>while</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer one word at a time:</p>
+<p>“Well, flamingos stand on one leg while sleeping…”</p>
+<p>(I’ve added “sleeping” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>because</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer one word at a time:</p>
+<p>“Well, flamingos stand on one leg while sleeping because they…”</p>
+<p>(I’ve added “they” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>must</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer one word at a time:</p>
+<p>“Well, flamingos stand on one leg while sleeping because they must conserve…”</p>
+<p>(I’ve added “conserve” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>heat</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer one word at a time:</p>
+<p>“Well, flamingos stand on one leg while sleeping because they must conserve heat and…”</p>
+<p>(I’ve added “and” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>food</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer one word at a time:</p>
+<p>“Well, flamingos stand on one leg while sleeping because they must conserve heat and food energy.”</p>
+<p>(I’ve added “energy” to complete the sentence with a logical explanation. This is actually scientifically accurate - flamingos stand on one leg to minimize heat loss and reduce the amount of energy they need to use while resting!)</p>
+<p>Would you like to start another answer or end the game?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>in</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building another part of the explanation:</p>
+<p>“Well, flamingos stand on one leg while sleeping because they must conserve heat and food energy in their…”</p>
+<p>(I’ve added “their” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>bellies</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer:</p>
+<p>“Well, flamingos stand on one leg while sleeping because they must conserve heat and food energy in their bellies while…”</p>
+<p>(I’ve added “while” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>standing</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Let’s continue building the answer:</p>
+<p>“Well, flamingos stand on one leg while sleeping because they must conserve heat and food energy in their bellies while standing in…”</p>
+<p>(I’ve added “in” - now it’s your turn to add the next word)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>water - this is the last word</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Here’s our complete answer:</p>
+<p>“Well, flamingos stand on one leg while sleeping because they must conserve heat and food energy in their bellies while standing in water.”</p>
+<p>This is a great collaborative answer! It explains the behavior quite accurately, as flamingos often stand in cold water, and keeping one leg tucked up helps them maintain body temperature while reducing energy expenditure. The one-legged stance also helps them stay stable in shifting waters.</p>
+<p>Thanks for playing Dr.&nbsp;Know It All! It was fun building this scientific explanation together one word at a time.</p>
+</blockquote>
+<hr>
+<section id="reflection" class="level3">
+<h3 class="anchored" data-anchor-id="reflection">Reflection</h3>
+<p>I thought this round turned out very well! I think Claude and I were on the same wavelength when we were starting off our response based off the question content. One thing that stood out to me was how Claude’s responses encouraged further exploration of words into the response. For example, it added conjugations such as “and” and “while.” This is different from my past experience with LLMs in class where it felt like the LLM was consistently trying to end the sentence or simply did not add any conjugation words to be built off of.</p>
+<hr>
 </section>
-<section id="how-do-llms-response-to-the-prompt" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-llms-response-to-the-prompt">How do LLMs response to the prompt?</h3>
-<p><strong>GPT3.5 Turbo</strong></p>
-<p><img src="gpt3-5.png" width="50%"></p>
-<p>Had some difficulties and answered <strong>green</strong></p>
-<p><strong>Llama2 (chat 7B version)</strong></p>
-<p><img src="llama2-chat7b.png" width="50%"></p>
-<ul>
-<li>Answered correctly (<strong>purple</strong>) and used some so-called <em>chain-of-thought</em> reasoning</li>
-</ul>
-<p><strong>Bing Chat (MS Co-pilot)</strong></p>
-<p>This LLM is GPT4 with some Microsoft specific tuning and RAG (search) additions.</p>
-<p>It get’s it correct:</p>
+</section>
+<section id="washing-machine" class="level2">
+<h2 class="anchored" data-anchor-id="washing-machine">2. Washing Machine</h2>
 <blockquote class="blockquote">
-<p>The color of the box on the bottom of the stack is purple. This is because the purple box is below the pink one, which is in the middle of the stack. Therefore, the purple box must be the lowest one. 🟪</p>
+<p><strong>USER</strong></p>
+<p>We are going to play a game of Dr.&nbsp;Know it all where multiple players must work together to answer a question one word at a time. The question is “What happens inside a washing machine when clothes mysteriously lose their socks?” My first word is “the’“</p>
 </blockquote>
-<p>But when you follow up and ask it to create visual representation of the box arrangement</p>
 <blockquote class="blockquote">
-<p>PROMPT: Can you create a visual representation of how the boxes are arranged?</p>
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll play along and add the next word to follow “the”.</p>
+<p>“the lonely”</p>
+<p>Now it’s your turn to add the next word to continue building the answer!</p>
 </blockquote>
-<p>It responds</p>
 <blockquote class="blockquote">
-<p>RESPONSE: Sure, I’ll try to create that. Here is a visual representation of how the boxes are arranged:</p>
+<p><strong>USER</strong></p>
+<p>washing</p>
 </blockquote>
-<p>And uses DALL-E3 to create 4 different attempts at a visual representation:</p>
-<p><img src="boxes.png" class="img-fluid"></p>
-<p><strong>NONE OF WHICH ARE CORRECT!!!</strong></p>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“the lonely washing machine”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>doesn’t</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“the lonely washing machine doesn’t actually”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>have</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“the lonely washing machine doesn’t actually have any”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>socks</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“the lonely washing machine doesn’t actually have any socks because”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>it</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“the lonely washing machine doesn’t actually have any socks because it secretly”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>likes</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“the lonely washing machine doesn’t actually have any socks because it secretly likes eating”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>socks</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“the lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>dinner</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>And that completes our sentence! Let’s read the final answer:</p>
+<p>“The lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for dinner”</p>
+<p>That was a fun and creative answer! We managed to create a silly explanation for why socks go missing in the washing machine. Would you like to play another round with a different question?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>Let’s continue because it doesn’t answer the question.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>You’re right! Let’s continue adding to the sentence. So far we have: “The lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for dinner”</p>
+<p>I’ll add: “and”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>so</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“The lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for dinner and so the”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>washing</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“The lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for dinner and so the washing machine”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>steals</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“The lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for dinner and so the washing machine steals them”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>to</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“The lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for dinner and so the washing machine steals them to satisfy”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>its</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>I’ll add the next word:</p>
+<p>“The lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for dinner and so the washing machine steals them to satisfy its hungry”</p>
+<p>Your turn to add the next word!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>USER</strong></p>
+<p>Let’s end it here!</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ASSISTANT</strong></p>
+<p>Great! Here’s our final complete answer:</p>
+<p>“The lonely washing machine doesn’t actually have any socks because it secretly likes eating socks for dinner and so the washing machine steals them to satisfy its hungry”</p>
+<p>This turned out to be a fun, whimsical explanation for the age-old mystery of disappearing socks! The washing machine is portrayed as a hungry creature that deliberately steals and eats socks. Thanks for playing Dr.&nbsp;Know It All - it was a creative and entertaining session!</p>
+</blockquote>
+<hr>
+<section id="reflection-1" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-1">Reflection</h3>
+<p>This was a really interesting game. I was initially thrown off when Claude’s first word subsequent to “the” was “lonely,” considering that this would not have any relation to the question whatsoever. In this round, I would definitely agree that claude’s contributions felt more random as it included other words such as “lonely,” “secretly,” and “eating.” This gave way for a more creative response.</p>
+<p>Another thing to note is how it felt that the LLM was giving an output that had no relation to answering the prompt. I had to prompt the LLM that we needed to continue the game because the question itself remained unanswered. This made me realize more of how it seemed that the LLM was simply just stringing together words as it saw fit around the context the prompt, rather than trying to address the prompt itself.</p>
+<p>Overall, this was a fun exercise that expanded on what we did in class. I think it’d be nice to do more games like this with the LLMs in the future!</p>
 
 
 </section>
