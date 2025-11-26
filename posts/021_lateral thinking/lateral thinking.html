@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lindsey Lee">
-<meta name="dcterms.date" content="2025-10-10">
-<meta name="description" content="How many people can AI videos fool?">
+<meta name="dcterms.date" content="2025-11-04">
+<meta name="description" content="How do LLMs ‘feel’ when they listen to music?">
 
-<title>Real Vs. Fake: The Rise of Sora AI – Lindsey Lee - Explorations with LLMs</title>
+<title>Music to Image: How do LLMs interpret music? – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,45 +23,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -106,9 +71,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -146,10 +108,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Real Vs. Fake: The Rise of Sora AI</h1>
+      <h1 class="title">Music to Image: How do LLMs interpret music?</h1>
                   <div>
         <div class="description">
-          How many people can AI videos fool?
+          How do LLMs ‘feel’ when they listen to music?
         </div>
       </div>
                           <div class="quarto-categories">
@@ -173,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 10, 2025</p>
+        <p class="date">November 4, 2025</p>
       </div>
     </div>
     
@@ -192,34 +154,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<hr>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Sora AI_files/figure-html/a7b95cd3-0afa-4d85-a115-7f1079497582-1-2fe275a7-1323-4371-a1e9-24e071c80333.png" class="img-fluid figure-img"></p>
-<figcaption>sora.png</figcaption>
+<p><img src="lateral thinking_files/figure-html/58a152a0-eba6-46d4-bc54-fbcc4afa2a58-1-676fe7fc-598d-4ccd-87b0-19b57e8bfed5.png" class="img-fluid figure-img"></p>
+<figcaption>music miffy.png</figcaption>
 </figure>
 </div>
 <hr>
-<p>In today’s digital age, the line between reality and fabrication is becoming increasingly blurred, thanks to the rapid advancements AI-generated videos. These videos are widespread, encompassing a wide range of content—from soothing ASMR clips and entertaining animal antics to more sinister applications that include spreading misinformation and creating lifelike videos of political figures. In this blog, I wanted to survey my friends and see whether they would believe my AI video was real.</p>
+<p>Can LLMs “feel” music? After our class activity this past Monday, I was really curious to see how LLMs might describe and depict music. After all, it may be able to analyze the mood and tone of the pieces based on the musical notation of the piece to have a certain psychological effect on us. Perhaps it may be even more skilled at analyzing these pieces compared to an untrained ear considering it has a rich database that may contain analysis of musical pieces. I wanted to experiment with this idea myself, so I chose to listen to one of the most iconic classical pieces–Ride of the Valkyries by Richard Wagner.</p>
+<section id="part-1-my-reflection" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-my-reflection">Part 1: My Reflection</h3>
+<p>To give a point of comparison, I listened to the piece in full-length first, reflecting on the following points to incorporate in my prompt: <strong>1. How I feel when I listen to the music</strong> <strong>2. Points that stand out to me</strong> <strong>3. A story that resonates with me when listening to the music</strong> I then synthesized my reflection and asked gpt-4o to rewrite my reflection into an image prompt. I used the following prompt to execute this: &gt; <strong>INPUT</strong>: Please rewrite the following reflection into an image prompt for use with an LLM to generate an image: “Triumphant feeling with trumpets. Very dramatic. Army returns from a grueling war with battle scars and fatigue with a strong pride and feeling of victory. A crowd of people in a small town of primary colored german houses cheer for their return. It feels powerful, with dramatic lighting.” &gt; &gt; <em>note: the output was revised to make it learn towards fantasy realism elements</em> &gt; &gt; <strong>OUTPUT</strong>: A grand, painterly fantasy realism scene of a triumphant army returning home after a long and brutal war. The soldiers, weary yet proud, stride through a small, storybook German town filled with vividly painted, primary-colored houses. Their armor gleams with dents and scratches, capes flowing in the wind, faces marked with fatigue and honor. Townsfolk line the cobblestone streets, cheering and tossing flowers in celebration. Banners ripple overhead as sunlight pierces through dramatic clouds, bathing the scene in golden, radiant light. The atmosphere feels epic and emotional — a moment of glory and relief underscored by the imagined sound of triumphant trumpets.</p>
+<p>I then inputted this prompt into both Gemini and GPT-5 which resulted in:</p>
+<p><strong>Image 1: Gemini</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lateral thinking_files/figure-html/a6b1278c-5422-488c-a2f5-e473ca0549e2-1-8d76c26f-79ce-4d71-a755-69aac12ee087.png" class="img-fluid figure-img"></p>
+<figcaption>Gemini_Generated_Image_sydqulsydqulsydq.png</figcaption>
+</figure>
+</div>
+<p><strong>Image 2: GPT-5</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lateral thinking_files/figure-html/571e35e7-8b44-4d7a-a63d-8debd24af599-1-9ea3cd80-73eb-4dc4-8dc1-dce1d7934b7f.png" class="img-fluid figure-img"></p>
+<figcaption>ChatGPT Image Nov 4, 2025, 11_25_54 PM.png</figcaption>
+</figure>
+</div>
+<p>While these were both amazing visual depictions of my reflection from this song, I felt that GPT-5o was able to better encapture the mood and tone of the scene I was trying to convey with my words.</p>
+</section>
+<section id="part-2-llms-reflection" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-llms-reflection">Part 2: LLM’s Reflection</h3>
+<p>This next part involved prompting the LLMs (Gemini &amp; GPT-5) to reflect on the song and generate an image. I gave the LLM the following prompt for this purpose:</p>
+<blockquote class="blockquote">
+<p>Please listen to this song: https://www.youtube.com/watch?v=GGU1P6lBW6Q. Based on the linked music, I want you to describe the following items:</p>
+<ul>
+<li>how you feel when you listen to the music</li>
+<li>points that stand out to you</li>
+<li>a story that resonates with you when listening to the music</li>
+</ul>
+<p>Given these three points, please write an image prompt that would consolidate these three points and create a visual depiction of the music.</p>
+</blockquote>
+<section id="gpt-5" class="level4">
+<h4 class="anchored" data-anchor-id="gpt-5"><strong>GPT-5</strong></h4>
+<p>I was thoroughly impressed by GPT-5’s analysis of the piece. It particularly commented on the exhilarating nature of the piece and the excitement it invokes in its listeners. It also comments on how the music makes you feel both “tension and release,” which then ultimately has the effect of making “you feel lifted, [carried, and transformed].”</p>
+<p>Ultimately, GPT-5 gave me the following image prompt, which then generated the images (Gemini &amp; GPT-5):</p>
+<blockquote class="blockquote">
+<p>A dynamic, heroic scene: a tall winged figure (angelic or Valkyrie‐like) soaring high above a dramatic, storm-scoured mountain valley. Massive brass-coloured wings span wide, catching the slanting light of a breaking dawn. Below, rugged peaks and dark clouds part to reveal golden rays and swirling mist. The figure is clad in flowing armor that reflects both classical and mythic motifs, the pose one of triumphant ascent: wings fully spread, one fist raised, head tilted up toward the light. The palette: deep storm blues and grays in the lower valley, transitioning to warm golds, amber and white light above. In the background, the remnants of battle: broken spears, ancient stone, scattered banners but these are partially obscured by lifting mist. The composition: sweeping diagonals that convey movement and lift, the wings and light forming a V-shape which echoes triumph. The mood: epic, liberating, powerful, mythic. High detail, cinematic lighting, painterly style with a hint of modern digital clarity — suitable for an epic fantasy poster.</p>
+</blockquote>
+<p><strong>Image 1: Gemini:</strong> <img src="lateral thinking_files/figure-html/dee0c23a-39d9-4d55-9a68-3eb750c97e0b-1-206f5da6-efb6-4398-b88c-8f14b097ae3d.png" class="img-fluid" alt="Gemini_Generated_Image_57rgf557rgf557rg.png"> <strong>Image 2: GPT-5:</strong> <img src="lateral thinking_files/figure-html/dee0c23a-39d9-4d55-9a68-3eb750c97e0b-2-935bdfed-542e-4849-9710-bc5c4a22590e.png" class="img-fluid" alt="angle.png"></p>
+</section>
+<section id="gemini" class="level4">
+<h4 class="anchored" data-anchor-id="gemini"><strong>Gemini</strong></h4>
+<p>Gemini also gave an equally thoughtful response and analysis of this piece. It was also able to comment on the “epic power, relentless urgency, and exhilarating grandeur” that the music creates. Notably, I thought that it was interesting that Gemini included time stamps of specific parts of the piece. I’ll include them below: &gt; - “The Driving Rhythm [00:00:00 - 00:00:28]: The piece begins with a hypnotic, pulsating figure in the cellos and basses, creating a foundation of tension and relentless forward motion, like the beating of enormous wings or the churning of a great engine. &gt; - The Iconic Brass Motif [00:58]: The moment the French horns and trumpets introduce the soaring, unforgettable main theme, it immediately feels like a triumphant battle-cry. This rising and falling figure in the brass creates a visual sense of flight and soaring through the air. &gt; - The Orchestral Climax [01:28]: The shift to the full, booming fortissimo (very loud) sound of the entire orchestra—with heavy percussion, full brass, and sweeping strings—is a breathtaking surge of energy. This massive sound stands out as a declaration of pure, unstoppable force.”</p>
+<p>Ultimately, Gemini gave me the following image prompt, which then generated the following images (Gemini &amp; GPT-5):</p>
+<blockquote class="blockquote">
+<p>An epic, hyper-detailed digital painting, highly cinematic, showing a squadron of eight Valkyries in gleaming, battle-worn silver and bronze armor. They are mounted on powerful, winged horses, charging relentlessly through a turbulent, deep indigo and crimson-streaked storm sky. The composition must emphasize dramatic forward motion and speed. Lightning strikes illuminate the scene, casting stark highlights on the brass of their musical instruments and the metallic gleam of their armor. The atmosphere is martial, chaotic, and supremely majestic. Inspired by Richard Wagner’s ’Ride of The Valkyries.</p>
+</blockquote>
+<p><strong>Image 1: Gemini:</strong> <img src="lateral thinking_files/figure-html/00cfd789-eb51-4d8b-8780-648c077f4c48-1-26dad95b-745a-4216-b831-61dc0ee239b8.png" class="img-fluid" alt="Gemini_Generated_Image_nua772nua772nua7.png"> <strong>Image 2: GPT-5:</strong> <img src="lateral thinking_files/figure-html/00cfd789-eb51-4d8b-8780-648c077f4c48-2-6b62edb6-6c52-46f9-86b4-41ffdecbb205.png" class="img-fluid" alt="ChatGPT Image Nov 4, 2025, 11_48_34 PM.png"></p>
 <hr>
-<p>For this purpose, I used Video AI by invideo, powered by sora AI, which has been taking the general media by storm. I wanted to generate a video that seemed the most innoncent of all–an adorable animal video. I generated it in the form of a tiktok so that it would seem more realistic to my friends.</p>
-<p>This was the conversation I had: &gt; <strong>Me:</strong> Create a realistic tiktok video featuring a dog and cat playing with each other. &gt; &gt; <strong>Assistant</strong>: Here are two ideas to choose from: &gt; - <strong>Option A – “Best Buddies Forever” (30 sec)</strong> A warm, cozy, heart-melting short showing a dog and cat playing together in slow motion — light background music, golden lighting, and a cheerful narration about unlikely friendships. &gt; &gt; - <strong>Option B – “Battle of the Furballs” (45 sec)</strong> Funny, fast-paced, and meme-style — zooms, playful music, and captions as if the dog and cat are having a mock battle, ending in a cuddle. &gt; <strong>Me:</strong> A, as long as its giving wholesome and fuzzy heart-warming vibes. No narration is needed. &gt; &gt; <strong>Assistant:</strong> Just to confirm before I generate it: &gt; * <strong>Platform:</strong> TikTok &gt; * <strong>Style:</strong> Realistic, cozy, natural lighting, no narration (just music &amp; visuals) &gt; * <strong>Duration:</strong> ~30 seconds &gt; * <strong>Mood:</strong> Wholesome, warm, “aww” vibes — dog and cat playing affectionately indoors or in a sunlit garden &gt; &gt; <strong>Me:</strong> Keep it natural with ambient sounds</p>
-<p>Would you like me to include <strong>soft background music</strong> (like acoustic or piano), or leave it completely natural with ambient sounds (like their playful barks/meows)?</p>
-<p>Which one do you prefer, or do you have another tone in mind (e.g., cinematic, ASMR, funny, cute, emotional)?</p>
-<p>The video is embedded below:</p>
-<div id="397e1bca-67ab-45ed-b851-1513768c63a7" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>html</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>iframe width<span class="op">=</span><span class="st">"560"</span> height<span class="op">=</span><span class="st">"315"</span> src<span class="op">=</span><span class="st">"https://www.youtube.com/shorts/yccjHob05u8"</span> frameborder<span class="op">=</span><span class="st">"0"</span> allowfullscreen<span class="op">&gt;&lt;/</span>iframe<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<iframe width="560" height="315" src="https://www.youtube.com/shorts/yccjHob05u8" frameborder="0" allowfullscreen=""></iframe>
-</div>
-</div>
-<p>If not showing above, the link is available here: https://www.youtube.com/shorts/yccjHob05u8</p>
-<p>Then, I shared this video with 7 of my friends and asked them if they thought it was AI while we were sharing tiktok videos together. I worded it in the way below to make the question appear less suspicious: &gt; “Wait is this real or is this AI?”</p>
-<section id="survey-results-reflection" class="level3">
-<h3 class="anchored" data-anchor-id="survey-results-reflection">Survey Results &amp; Reflection</h3>
-<p>Overall, all 7 of my friends were able to guess that the video was AI-generated. Many of them pointed out that the “video looked fake” because of the textures in the video. Despite being able to accurately identify that it was an AI video, many of them had also exclaimed on the realism of the video and how great the quality was.</p>
-<p>If my friends had been any less keen on technology, I think it would have been easy to fool someone into thinking that this was a real video with real animals. Even more, if technology continues to improve at this rapid rate, it’s possible that humans are no longer able to distinguish between AI and real videos anymore.</p>
-<p>One thing I also wonder that I hope to investigate more in the future is what source and training materials LLMs use to generate these videos. I’d be curious learn more about how this source material influences the type of product generated.</p>
+</section>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>This was such a fascinating activity and likely one of my most favorite blog posts I’ve written thus far! When comparing between the LLM’s generations and refleciton of the music compared to mine, it feels as though their analyses are more “correct” as it likely draws from databases analysing this piece. Due to this, I do wonder how much of this output is a generalization of analysis of this musical piece completed by musicians prior, or the LLM’s own independent generalization and analysis of the musical orchestration and patterns in this piece. The similar motifs and reflections generated by both Gemini and GPT-5 hints to me that it is likely the former, but it would be exciting to dive into this topic more deeply and learn more about LLM competency in the use of music theory.</p>
 
 
 </section>
