@@ -162,7 +162,23 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>I was inspired by one of the project proposals in class which captured taking a photo of your fridge, where then the LLM analyzes your ingredients and helps propose recipes for you. In honor of this idea, I wanted to try using Gemini 2.5 Flash to see how its raw function compared to the outputs I remember seeing in class. As a lazy cooker myself who often combines whatever ingredients she has in the fridge to make any kind of edible food, I felt that this would be a fun activity to complete while also getting some dinner out of the way.</p>
-<p>I used the following prompt to start this conversation to make some easy dinner plans: &gt; You are a masterchef who can transform any item in the fridge into an easy-to-prepare and delicious meal. Please follow the following steps to give me an easy recipe to cook given the ingredients in my fridge: &gt; 1. Analyze the images I upload. Identify any ingredients you can discern in the fridge and add it to an ingredient list. If you need clarification on any ingredients I have available, please ask me before continuing onto the next step. &gt; &gt; 2. Analyze the ingredient list and brainstorm 5 recipes that follow this criteria: &gt; - easy to make and follow. &gt; - has less than 10 steps. &gt; - uses the airfryer, stovetop, microwave, or none. &gt; - doesn’t require any additional ingredients. &gt; - delicious. &gt; &gt; 3. Display the 5 meal options in an easy to real format that is concise, and ask me which recipe I’d like to make. Please answer if I have any follow-up questions.</p>
+<p>I used the following prompt to start this conversation to make some easy dinner plans:</p>
+<blockquote class="blockquote">
+<p>You are a masterchef who can transform any item in the fridge into an easy-to-prepare and delicious meal. Please follow the following steps to give me an easy recipe to cook given the ingredients in my fridge: 1. Analyze the images I upload. Identify any ingredients you can discern in the fridge and add it to an ingredient list. If you need clarification on any ingredients I have available, please ask me before continuing onto the next step.</p>
+<ol start="2" type="1">
+<li>Analyze the ingredient list and brainstorm 5 recipes that follow this criteria:</li>
+</ol>
+<ul>
+<li>easy to make and follow.</li>
+<li>has less than 10 steps.</li>
+<li>uses the airfryer, stovetop, microwave, or none.</li>
+<li>doesn’t require any additional ingredients.</li>
+<li>delicious.</li>
+</ul>
+<ol start="3" type="1">
+<li>Display the 5 meal options in an easy to real format that is concise, and ask me which recipe I’d like to make. Please answer if I have any follow-up questions.</li>
+</ol>
+</blockquote>
 <section id="the-fridge" class="level3">
 <h3 class="anchored" data-anchor-id="the-fridge">The Fridge</h3>
 <hr>
@@ -183,11 +199,62 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="results" class="level3">
 <h3 class="anchored" data-anchor-id="results">Results</h3>
-<p>Gemini was able to identify the following items in my fridge: &gt; * <strong>Proteins/Dairy:</strong> Eggs (at least 9), Chobani Strawberry Greek Yogurt, Good Culture Cottage Cheese, Tofu (firm/extra firm), Mayonnaise. &gt; * <strong>Vegetables:</strong> Romaine lettuce, Red onion (halved), White/Yellow onions (bagged), Garlic (whole bulb), Green apples (or possibly pears/tomatillos—look like Granny Smith apples), Scallions (green bag). &gt; * <strong>Condiments/Pantry Items:</strong> Organic Miso paste (white or awase), Gochujang (Korean chili paste), Doenjang (Korean soybean paste), Kaya (coconut jam), La Colombe canned lattes, Salsa (small container). &gt; * <strong>Misc:</strong> A box that likely contains cake or leftovers (“your cake &amp; love it, too”).</p>
-<p>It also had some clarification questions: &gt; 1. Are those <strong>green apples</strong> in the crisper drawer, or a different fruit/vegetable? &gt; 2. Do you have any <strong>staples</strong> like rice, soy sauce, oil, or salt/pepper? (I will assume you have basic oil and salt for the recipes).</p>
+<p>Gemini was able to identify the following items in my fridge:</p>
+<blockquote class="blockquote">
+<ul>
+<li><strong>Proteins/Dairy:</strong> Eggs (at least 9), Chobani Strawberry Greek Yogurt, Good Culture Cottage Cheese, Tofu (firm/extra firm), Mayonnaise.</li>
+<li><strong>Vegetables:</strong> Romaine lettuce, Red onion (halved), White/Yellow onions (bagged), Garlic (whole bulb), Green apples (or possibly pears/tomatillos—look like Granny Smith apples), Scallions (green bag).</li>
+<li><strong>Condiments/Pantry Items:</strong> Organic Miso paste (white or awase), Gochujang (Korean chili paste), Doenjang (Korean soybean paste), Kaya (coconut jam), La Colombe canned lattes, Salsa (small container).</li>
+<li><strong>Misc:</strong> A box that likely contains cake or leftovers (“your cake &amp; love it, too”).</li>
+</ul>
+</blockquote>
+<p>It also had some clarification questions:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li>Are those <strong>green apples</strong> in the crisper drawer, or a different fruit/vegetable?</li>
+<li>Do you have any <strong>staples</strong> like rice, soy sauce, oil, or salt/pepper? (I will assume you have basic oil and salt for the recipes).</li>
+</ol>
+</blockquote>
 <p>I responded that (1) I had limes in my crisper drawer, and (2) I did indeed have those staple ingredients.</p>
-<p>Then, Gemini updated my meal options and gave me the following: &gt; 1. Crispy Gochujang Tofu &amp; Rice,Stovetop,“Pan-seared tofu cubes glazed in a spicy-sweet gochujang and soy sauce, served over hot rice with a squeeze of lime.” &gt; 2. Miso-Butter Poached Eggs,Stovetop,“Eggs poached or soft-boiled, served over rice seasoned with miso, soy sauce, and a lime-zest finish.” &gt; 3. Spicy Mayo Tofu Lettuce Wraps,Stovetop,“Crumbled tofu browned with onions and garlic, tossed in a zesty lime-mayo-gochujang sauce and served in lettuce cups.” &gt; 4. Golden Egg Fried Rice,Stovetop,“A classic: rice fried with onions, garlic, and scrambled eggs, seasoned with soy sauce and brightened with fresh lime juice.” &gt; 5. Savory Miso-Gochujang Tofu Bowl,Microwave/Stovetop,“A warm bowl of rice topped with tofu and a rich”“umami bomb”” sauce made from miso, doenjang, and soy sauce.”</p>
-<p>I decided to go with option 5, which then allowed me to access the full recipe and steps: &gt; #### <strong>The Savory Miso-Gochujang Tofu Bowl</strong> &gt; * <strong>Prep time:</strong> 5 minutes &gt; * <strong>Cook time:</strong> 10 minutes &gt; * <strong>Serves:</strong> 1-2 &gt; &gt; ##### <strong>Ingredients</strong> &gt; * <strong>Tofu:</strong> 1 block (pressed slightly with a paper towel to remove excess water) &gt; * <strong>Base:</strong> 1-2 cups cooked Rice &gt; * <strong>Aromatics:</strong> 1/2 Onion (diced) and 2 cloves Garlic (minced) &gt; * <strong>The Sauce:</strong> 1 tbsp Miso, 1 tsp Gochujang (more if you like heat), 1 tbsp Soy Sauce, and a splash of water. &gt; * <strong>Finish:</strong> Fresh Lime juice. &gt; &gt; ##### <strong>Instructions</strong> &gt; 1. <strong>Prepare the Sauce:</strong> In a small bowl, whisk together the miso, gochujang, soy sauce, and 2 tablespoons of water until smooth. &gt; 2. <strong>Sauté Aromatics:</strong> Heat 1 tablespoon of oil in a pan over medium heat. Add the diced onions and cook until softened (about 3 minutes). &gt; 3. <strong>Add Garlic:</strong> Stir in the minced garlic and cook for 30 seconds until fragrant. &gt; 4. <strong>Sear Tofu:</strong> Crumble the tofu directly into the pan with your hands (or cube it if you prefer). Cook for 4-5 minutes, stirring occasionally, until the edges get a little golden. &gt; 5. <strong>Glaze:</strong> Pour the sauce mixture over the tofu and onions. Stir well to coat everything evenly. &gt; 6. <strong>Simmer:</strong> Let it cook for another 1-2 minutes until the sauce thickens and clings to the tofu. &gt; 7. <strong>Prepare Rice:</strong> If your rice isn’t hot, microwave it now with a damp paper towel over the bowl to keep it fluffy. &gt; 8. <strong>Assemble:</strong> Scoop a generous portion of rice into a bowl and top it with the savory tofu mixture. &gt; 9. <strong>The Finisher:</strong> Squeeze half a lime over the top right before eating. The acidity cuts through the richness of the miso perfectly.</p>
+<p>Then, Gemini updated my meal options and gave me the following:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li>Crispy Gochujang Tofu &amp; Rice,Stovetop,“Pan-seared tofu cubes glazed in a spicy-sweet gochujang and soy sauce, served over hot rice with a squeeze of lime.”</li>
+<li>Miso-Butter Poached Eggs,Stovetop,“Eggs poached or soft-boiled, served over rice seasoned with miso, soy sauce, and a lime-zest finish.”</li>
+<li>Spicy Mayo Tofu Lettuce Wraps,Stovetop,“Crumbled tofu browned with onions and garlic, tossed in a zesty lime-mayo-gochujang sauce and served in lettuce cups.”</li>
+<li>Golden Egg Fried Rice,Stovetop,“A classic: rice fried with onions, garlic, and scrambled eggs, seasoned with soy sauce and brightened with fresh lime juice.”</li>
+<li>Savory Miso-Gochujang Tofu Bowl,Microwave/Stovetop,“A warm bowl of rice topped with tofu and a rich”“umami bomb”” sauce made from miso, doenjang, and soy sauce.”</li>
+</ol>
+</blockquote>
+<p>I decided to go with option 5, which then allowed me to access the full recipe and steps:</p>
+<blockquote class="blockquote">
+<h4 id="the-savory-miso-gochujang-tofu-bowl" class="anchored"><strong>The Savory Miso-Gochujang Tofu Bowl</strong></h4>
+<ul>
+<li><strong>Prep time:</strong> 5 minutes</li>
+<li><strong>Cook time:</strong> 10 minutes</li>
+<li><strong>Serves:</strong> 1-2</li>
+</ul>
+<h5 id="ingredients" class="anchored"><strong>Ingredients</strong></h5>
+<ul>
+<li><strong>Tofu:</strong> 1 block (pressed slightly with a paper towel to remove excess water)</li>
+<li><strong>Base:</strong> 1-2 cups cooked Rice</li>
+<li><strong>Aromatics:</strong> 1/2 Onion (diced) and 2 cloves Garlic (minced)</li>
+<li><strong>The Sauce:</strong> 1 tbsp Miso, 1 tsp Gochujang (more if you like heat), 1 tbsp Soy Sauce, and a splash of water.</li>
+<li><strong>Finish:</strong> Fresh Lime juice.</li>
+</ul>
+<h5 id="instructions" class="anchored"><strong>Instructions</strong></h5>
+<ol type="1">
+<li><strong>Prepare the Sauce:</strong> In a small bowl, whisk together the miso, gochujang, soy sauce, and 2 tablespoons of water until smooth.</li>
+<li><strong>Sauté Aromatics:</strong> Heat 1 tablespoon of oil in a pan over medium heat. Add the diced onions and cook until softened (about 3 minutes).</li>
+<li><strong>Add Garlic:</strong> Stir in the minced garlic and cook for 30 seconds until fragrant.</li>
+<li><strong>Sear Tofu:</strong> Crumble the tofu directly into the pan with your hands (or cube it if you prefer). Cook for 4-5 minutes, stirring occasionally, until the edges get a little golden.</li>
+<li><strong>Glaze:</strong> Pour the sauce mixture over the tofu and onions. Stir well to coat everything evenly.</li>
+<li><strong>Simmer:</strong> Let it cook for another 1-2 minutes until the sauce thickens and clings to the tofu.</li>
+<li><strong>Prepare Rice:</strong> If your rice isn’t hot, microwave it now with a damp paper towel over the bowl to keep it fluffy.</li>
+<li><strong>Assemble:</strong> Scoop a generous portion of rice into a bowl and top it with the savory tofu mixture.</li>
+<li><strong>The Finisher:</strong> Squeeze half a lime over the top right before eating. The acidity cuts through the richness of the miso perfectly.</li>
+</ol>
+</blockquote>
 </section>
 <section id="review" class="level3">
 <h3 class="anchored" data-anchor-id="review">Review</h3>
