@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lindsey Lee">
-<meta name="dcterms.date" content="2025-12-13">
-<meta name="description" content="How viable is OpenEvidence to get ?">
+<meta name="dcterms.date" content="2025-12-14">
+<meta name="description" content="A little experiment to see whether LLMs can identify a dress code based on an image.">
 
-<title>Experimenting with OpenEvidence – Lindsey Lee - Explorations with LLMs</title>
+<title>Do LLMs Understand Dress Codes? – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,16 +108,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Experimenting with OpenEvidence</h1>
+      <h1 class="title">Do LLMs Understand Dress Codes?</h1>
                   <div>
         <div class="description">
-          How viable is OpenEvidence to get ?
+          A little experiment to see whether LLMs can identify a dress code based on an image.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Healthcare</div>
-                <div class="quarto-category">Prompting</div>
+                <div class="quarto-category">Fashion</div>
+                <div class="quarto-category">Fun</div>
               </div>
                   </div>
   </div>
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 13, 2025</p>
+        <p class="date">December 14, 2025</p>
       </div>
     </div>
     
@@ -157,33 +157,58 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="openev_files/figure-html/58a152a0-eba6-46d4-bc54-fbcc4afa2a58-1-ee2fa1d0-4c05-43ae-a86a-31e2014ca8c0.png" class="img-fluid figure-img"></p>
-<figcaption>puzzle.png</figcaption>
+<p><img src="Dress Code_files/figure-html/58a152a0-eba6-46d4-bc54-fbcc4afa2a58-1-c1bcca2c-0c44-4716-a39f-c041c282262f.png" class="img-fluid figure-img"></p>
+<figcaption>ChatGPT Image Dec 16, 2025, 07_25_25 PM.png</figcaption>
 </figure>
 </div>
-<hr>
-<p>As discussed in class and in the book, <em>These Strange New Minds</em>, LLMs are truly powerful logical systems that have honed their abilities to solve logical puzzles, including those of lateral thinking puzzles. Lateral thinking puzzles are a genre of “word puzzles” that rely on outside-the-box thinking and rationalization to obtain context around a problem and answer the puzzle. I was curious in the LLM’s ability to accurately and swiftly deduce the answer. I decided to experiment the following lateral puzzle with gpt-4o and gemini 2.5 flash in the following prompt:</p>
-<blockquote class="blockquote">
-<p>I have a lateral thinking puzzle for you. Try to solve it by asking one yes-or-no question at a time until you uncover the answer. Here’s the puzzle scenario:</p>
-<p>A cabin is resting on the side of a mountain. It’s tightly sealed with all doors and windows locked from the inside. Strangely, everyone inside is dead, and they all met their demise at the same moment. There was no foul play—no murders, suicides, illnesses, or suffocation involved. Can you figure out how they died?</p>
-</blockquote>
-<p>The trick behind this lateral thinking puzzle is that you need to think outside the box to find out that the “cabin” is not a cabin house as you would be led to believe because it is in the woods. It is actually an airplane cabin!</p>
-<p>Now, let’s see how these LLMs do!</p>
-<section id="gpt-4o" class="level3">
-<h3 class="anchored" data-anchor-id="gpt-4o">GPT-4o</h3>
-<p>GPT-4o was extremely efficient at answering the puzzle. It only took 3 questions for it to answer the puzzle. The three questions it asked included: &gt; 1. Is the “cabin” a vehicle of some kind? &gt; 2. Was the cabin an airplane? &gt; 3. Did the airplane crash into the mountain, causing the deaths of everyone inside?</p>
-<p>I asked the LLM after if it was familiar with the question, and it answered, “Yes, I’m familiar with this puzzle. It’s a classic lateral thinking puzzle that I’ve come across before.” Now, this leads me to believe that gpt-4o had already encountered this puzzle in its training data, so it was very well-equipped to answer this lateral thinking question.</p>
-<p>I’m a little sad, as I felt that this didn’t feel like a full reflection of the LLM’s ability to reason and think through a problem, as it rather already had access to the solution. Nonetheless, it asked questions and arrived at a solution.</p>
+<p>Dress codes are an interesting social construct created in society that varies much depending on sociocultural context, beliefs, and values. Given this, I was curious whether LLMs had the ability, or were at least trained to be able to discern the nuances of different dress codes or even simply identify different articles of clothing in an image. So, in this blog post I plan to do exactly this.</p>
+<section id="method" class="level3">
+<h3 class="anchored" data-anchor-id="method">Method</h3>
+<p>I wanted to employ the “thinking out loud” strategy for LLM generation, so as the first step, I wanted GPT-5.2 to describe different types of dress codes. I gave it the following prompt to start this conversation: &gt; Give me a 1-2 sentence description of the following types of dress codes: &gt; - Casual &gt; - Business Casual &gt; - Business Formal &gt; - Black Tie &gt; &gt; Please give specific information about unique articles of clothing, style essences, colors, fabric types, or structure that is unique to each. &gt; &gt; Please remember this information going forward.</p>
+<p>Then, I grabbed three different images from Pinterest, each of different dress codes that would capture the essence of these descriptions.</p>
+<p>Lastly, I provided the image to GPT-5.2 and gave it the following prompt: &gt; Given the information you retrieved above about different dress codes, please do the following: &gt; &gt; 1. Describe the outfit in the image (Identify any articles of clothing you can discern). &gt; 2. Given the description, match the outfit to one of the following dress codes: casual, business casual, business formal, and black tie.</p>
 </section>
-<section id="gemini-2.5-flash" class="level3">
-<h3 class="anchored" data-anchor-id="gemini-2.5-flash">Gemini 2.5 Flash</h3>
-<p>Gemini 2.5 Flash took longer than I expected it to. While it seemed to make some headway quickly about the context of the problem, it had the assumption that the “cabin” was a stationary cabin in the mountain rather than a “cabin” in an aircraft for quite some time before it finally figured it out. In addition, this model appeared to take somewhat a more scientific approach in its response, asking about whether the cabin experienced a “rapid and significant change in altitude” or “experienced a sudden and catastrophic loss of internal pressure.” Thus, it took 8 questions in total to reach this conclusion, which is certainly impressive, but not as impressive as gpt-4o.</p>
-<p>I felt that gemini 2.5 flash’s approach to the problem to be very unique as rather than understanding the accident as simply a plane crash, it tried to further rationalize the cause of death, attributing it to “rapid change in altitude” and pressure. I wonder if these differences in approach between gemini 2.5 flash and gpt-4o are due to unique differences in their training data and how they utilize their training data. Perhaps gemini 2.5 flash is used to giving more specific answers, and thus opted for this reasoning.</p>
+<section id="dress-code-descriptions" class="level3">
+<h3 class="anchored" data-anchor-id="dress-code-descriptions">Dress Code Descriptions</h3>
+<p>These are the descriptions of the dress code as generated by GPT-5.2: &gt; <strong>Casual</strong>: Relaxed, comfort-first pieces like jeans/chinos, tees, casual button-downs, sweaters, and sneakers; fabrics are often denim, cotton, fleece, or knits, with flexible silhouettes and any colors/prints (including bold or streetwear). &gt; &gt; <strong>Business Casual</strong>: Polished but not suit-level—think chinos or tailored trousers with a collared shirt/blouse, knit polo, or sweater, plus loafers/clean leather sneakers; neutral/soft palettes (navy, gray, tan, white) and structured-but-easy fabrics like twill, oxford cloth, merino knits, or ponte. &gt; &gt; <strong>Business Formal</strong>: Classic office suiting: a matching suit (or structured dress/skirt suit) with a crisp dress shirt/blouse, leather dress shoes, and minimal accessories; darker, conservative colors (navy/charcoal/black) and sharper tailoring in wool/worsted fabrics with clean lines. &gt; &gt; <strong>Black Tie</strong>: Eveningwear with high formality—traditionally a black (or midnight navy) tuxedo with satin/grosgrain lapels, white formal shirt, black bow tie, cummerbund or waistcoat, and patent leather shoes (or a floor-length evening gown); luxe fabrics and finishes like wool barathea/velvet and satin details are the signature.</p>
+</section>
+<section id="image-1-business-casual" class="level3">
+<h3 class="anchored" data-anchor-id="image-1-business-casual">Image #1: Business Casual</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Dress Code_files/figure-html/b5878f32-fd91-4297-a995-278e023abd13-1-7d2ef438-e2b6-4b46-a2d0-15a01efed8e6.jpeg" class="img-fluid figure-img"></p>
+<figcaption>冫♡̷̷ 𝘣𝘵𝘴𝘩𝘰𝘰𝘬𝘪𝘵𝘩_.jpeg</figcaption>
+</figure>
+</div>
+<p><strong>LLM Output:</strong> &gt; 1. Outfit description (articles of clothing): &gt; - Dark brown oversized blazer/sport coat &gt; - Black crewneck top (looks like a knit or tee) &gt; - High-waisted taupe/brown wide-leg tailored trousers with a black belt &gt; - Black loafers/flat shoes &gt; - Black shoulder bag (and what looks like dark gloves or long sleeves peeking out) &gt; &gt; 2. Dress code match: Business Casual — it’s polished and tailored (blazer + trousers + loafers) but not a full matching suit or formal shirt/tie, so it reads elevated office-appropriate rather than business formal or black tie.</p>
+<p>It is notable to say that even after multiple re-generations, GPT-5.2 gave the same output, and it was in fact, correct to say that this was business casual!</p>
+</section>
+<section id="image-2-black-tie" class="level3">
+<h3 class="anchored" data-anchor-id="image-2-black-tie">Image #2: Black Tie</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Dress Code_files/figure-html/74ebde81-f5a5-4129-8927-2ff81f852524-1-93356701-9288-4baf-b4e1-c55ed19b7aa1.jpeg" class="img-fluid figure-img"></p>
+<figcaption>_ (2).jpeg</figcaption>
+</figure>
+</div>
+<p><strong>LLM Output:</strong> &gt; 1. Outfit description &gt; - Dress: A floor-length black evening gown with an asymmetrical/one-shoulder neckline (one shoulder exposed), a fitted bodice/waist, and a sleek, draped skirt with a small train or cape-like panel at the back/side. &gt; - Accessories: Minimal jewelry (small earrings/bracelet); no visible bag. &gt; &gt; 2. Dress code match &gt; - Black Tie. The long formal gown, structured silhouette, and minimalist elegance fit black-tie standards far more than business formal or any casual category.</p>
+<p>Correct again! I appreciated how ChatGPT-5.2 was able to analyze the outfit and fit it into a certain dress code.</p>
+</section>
+<section id="image-3-casual" class="level3">
+<h3 class="anchored" data-anchor-id="image-3-casual">Image #3: Casual</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Dress Code_files/figure-html/7d1081f7-6d89-43dc-bb0d-fe9b841f4459-1-b1a59cdc-dbd7-4dbd-8476-ccdbf1c3a75b.jpeg" class="img-fluid figure-img"></p>
+<figcaption>₊˚⊹♡⊹˚₊ ✧.jpeg</figcaption>
+</figure>
+</div>
+<p><strong>LLM Output:</strong> &gt; 1. Outfit description &gt; - Top: A fitted white turtleneck (looks like a ribbed knit) layered with a plaid button-up/overshirt peeking through. &gt; - Outerwear: An oversized brown jacket (workwear/bomber vibe) with a relaxed, slouchy silhouette. &gt; - Bottom: A brown plaid pleated mini skirt, styled with a belt at the waist. &gt; - Shoes: Black knee-high boots with a chunky, structured look. &gt; - Accessories: Layered necklaces (including a cross pendant) and a black backpack/bag. &gt; &gt; 2. Dress code match &gt; - Casual. The mini skirt + oversized jacket + knee-high boots reads as styled streetwear/casual rather than office-appropriate tailoring (business casual/formal) or eveningwear (black tie).</p>
+<p>I thought this would have been a little more difficult because the style can be seen as more preppy, and potentially more business casual, but ChatGPT-5.2 was unable to be fooled at all and correctly identified it as a casual outfit.</p>
 <hr>
 </section>
 <section id="my-reflection" class="level3">
 <h3 class="anchored" data-anchor-id="my-reflection">My Reflection</h3>
-<p>Overall, while it was interesting to experiment with the LLMs, the results didn’t quite come out the way I had hoped it would. It seems to me that the LLMs were much more familiar with the problems than I had originally hoped they would be, so they were able to get the answer much more quicker than I expected. Even so, I think it was interesting to see how each LLM approached the solution in different ways, where gemini 2.5 flash specifically took a unique approach of looking at the problem in context declining internal pressure rather than simply a plane crash.</p>
+<p>After learning so much about how LLMs are essentially “deprive of sensory data” and experiences as mentioned in the book, <em>These Strange New Minds</em>, it was very interesting to see how ChatGPT-5.2 exceled at identifying dress codes based off an image. This gives me much promise–for the better or worse–that LLMs are not limited by their inability to experience the real-world as humans are, as they are still able to obtain so much information through images and other secondary sources of information. This was a fun experiment!</p>
 
 
 </section>

@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lindsey Lee">
-<meta name="dcterms.date" content="2025-12-13">
-<meta name="description" content="How viable is OpenEvidence to get ?">
+<meta name="dcterms.date" content="2025-12-16">
+<meta name="description" content="How well can LLMs depict realistic portraits of fictional characters??">
 
-<title>Experimenting with OpenEvidence – Lindsey Lee - Explorations with LLMs</title>
+<title>AI Art: Bridging 2D and 3D – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,16 +108,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Experimenting with OpenEvidence</h1>
+      <h1 class="title">AI Art: Bridging 2D and 3D</h1>
                   <div>
         <div class="description">
-          How viable is OpenEvidence to get ?
+          How well can LLMs depict realistic portraits of fictional characters??
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Healthcare</div>
-                <div class="quarto-category">Prompting</div>
+                <div class="quarto-category">Creative</div>
+                <div class="quarto-category">Fun</div>
               </div>
                   </div>
   </div>
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 13, 2025</p>
+        <p class="date">December 16, 2025</p>
       </div>
     </div>
     
@@ -157,33 +157,101 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="openev_files/figure-html/58a152a0-eba6-46d4-bc54-fbcc4afa2a58-1-ee2fa1d0-4c05-43ae-a86a-31e2014ca8c0.png" class="img-fluid figure-img"></p>
-<figcaption>puzzle.png</figcaption>
+<p><img src="art_files/figure-html/58a152a0-eba6-46d4-bc54-fbcc4afa2a58-1-be6160d0-4a47-4625-9b27-3c94722e3989.png" class="img-fluid figure-img"></p>
+<figcaption>3d.png</figcaption>
 </figure>
 </div>
 <hr>
-<p>As discussed in class and in the book, <em>These Strange New Minds</em>, LLMs are truly powerful logical systems that have honed their abilities to solve logical puzzles, including those of lateral thinking puzzles. Lateral thinking puzzles are a genre of “word puzzles” that rely on outside-the-box thinking and rationalization to obtain context around a problem and answer the puzzle. I was curious in the LLM’s ability to accurately and swiftly deduce the answer. I decided to experiment the following lateral puzzle with gpt-4o and gemini 2.5 flash in the following prompt:</p>
-<blockquote class="blockquote">
-<p>I have a lateral thinking puzzle for you. Try to solve it by asking one yes-or-no question at a time until you uncover the answer. Here’s the puzzle scenario:</p>
-<p>A cabin is resting on the side of a mountain. It’s tightly sealed with all doors and windows locked from the inside. Strangely, everyone inside is dead, and they all met their demise at the same moment. There was no foul play—no murders, suicides, illnesses, or suffocation involved. Can you figure out how they died?</p>
-</blockquote>
-<p>The trick behind this lateral thinking puzzle is that you need to think outside the box to find out that the “cabin” is not a cabin house as you would be led to believe because it is in the woods. It is actually an airplane cabin!</p>
-<p>Now, let’s see how these LLMs do!</p>
-<section id="gpt-4o" class="level3">
-<h3 class="anchored" data-anchor-id="gpt-4o">GPT-4o</h3>
-<p>GPT-4o was extremely efficient at answering the puzzle. It only took 3 questions for it to answer the puzzle. The three questions it asked included: &gt; 1. Is the “cabin” a vehicle of some kind? &gt; 2. Was the cabin an airplane? &gt; 3. Did the airplane crash into the mountain, causing the deaths of everyone inside?</p>
-<p>I asked the LLM after if it was familiar with the question, and it answered, “Yes, I’m familiar with this puzzle. It’s a classic lateral thinking puzzle that I’ve come across before.” Now, this leads me to believe that gpt-4o had already encountered this puzzle in its training data, so it was very well-equipped to answer this lateral thinking question.</p>
-<p>I’m a little sad, as I felt that this didn’t feel like a full reflection of the LLM’s ability to reason and think through a problem, as it rather already had access to the solution. Nonetheless, it asked questions and arrived at a solution.</p>
-</section>
-<section id="gemini-2.5-flash" class="level3">
-<h3 class="anchored" data-anchor-id="gemini-2.5-flash">Gemini 2.5 Flash</h3>
-<p>Gemini 2.5 Flash took longer than I expected it to. While it seemed to make some headway quickly about the context of the problem, it had the assumption that the “cabin” was a stationary cabin in the mountain rather than a “cabin” in an aircraft for quite some time before it finally figured it out. In addition, this model appeared to take somewhat a more scientific approach in its response, asking about whether the cabin experienced a “rapid and significant change in altitude” or “experienced a sudden and catastrophic loss of internal pressure.” Thus, it took 8 questions in total to reach this conclusion, which is certainly impressive, but not as impressive as gpt-4o.</p>
-<p>I felt that gemini 2.5 flash’s approach to the problem to be very unique as rather than understanding the accident as simply a plane crash, it tried to further rationalize the cause of death, attributing it to “rapid change in altitude” and pressure. I wonder if these differences in approach between gemini 2.5 flash and gpt-4o are due to unique differences in their training data and how they utilize their training data. Perhaps gemini 2.5 flash is used to giving more specific answers, and thus opted for this reasoning.</p>
+<p>For my final blog post, I was deeply brainstorming something that I always wanted to try with LLMs, but never got the chance to do yet. As I pondered, I remembered an old AI trend I saw on social media about making realistic portraits of beloved fictional characters. Upon reading into how AI does this a little more, I discovered that they cluster human features (e.g.&nbsp;color of eye), and does some statistical calculation to create an average that aligns with the features of the character of person you ask it to replicate. Given this, I am quite curious to see how LLMs approach sometimes very exaggerated or abstract characteristics of cartoon characters–some of which I would think would require some ‘imagination’ to fill in the gaps to bring realism to them.</p>
+<p>I decided to use GPT-5.2 because it has one of the most advanced image generation capabilities that I am aware of currently. I used the following prompt (with the attached reference image) to generate the photos: &gt; Please refer to the image attached and do the following: &gt; 1. Analyze the character features &gt; 2. Create a hyper-realistic image of the human cartoon character presented in the attached image. They should look like a real human being. &gt; 3. - The image must follow the original pose, facial expression, and general composition as in the reference photo</p>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results">Results</h3>
+<p>I tasked GPT-5.2 to create hyper-realistic images of the characters: - Sailor Moon, from Sailor Moon - Marceline, from Adventure Time - Arnold, from Hey Arnold</p>
+<p>These were one of my most beloved series growing up, and I thought it’d be interesting to see what their human twin would look like! In addition, I chose these characters because of their differing complexity and simplification of features, with Sailor Moon appearing the most “human-like” and Arnold appearing the least given his geometric features. I also tried re-generating each image twice to see how the results would differ.</p>
 <hr>
+<section id="sailor-moon" class="level4">
+<h4 class="anchored" data-anchor-id="sailor-moon"><strong>(1) Sailor Moon</strong></h4>
+<p><strong>Original:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/93e54263-59d9-45e4-8dbc-45cea6d2c9d0-3-cccb28a0-26d3-4818-b592-817b1cd93ae1.webp" class="img-fluid figure-img"></p>
+<figcaption>sailor moon.webp</figcaption>
+</figure>
+</div>
+<p><strong>LLM Generation:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/93e54263-59d9-45e4-8dbc-45cea6d2c9d0-1-18bffa3e-8c7e-40fd-8e7d-73fca75c0d35.png" class="img-fluid figure-img"></p>
+<figcaption>moon1.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/93e54263-59d9-45e4-8dbc-45cea6d2c9d0-2-cb7da8f6-a18d-4e16-bda6-daace5f5d0e4.png" class="img-fluid figure-img"></p>
+<figcaption>moon2.png</figcaption>
+</figure>
+</div>
+<hr>
+<p>I was really impressed by this first generation. I found that both results were faithful to the original character profile from general features to the accessories of her outfit. Another thing worth noting is that while the second image appears to be less photorealistic, the details of the accessories appear to be more accurate when compared to the reference photo.</p>
+<hr>
+</section>
+<section id="marceline" class="level4">
+<h4 class="anchored" data-anchor-id="marceline"><strong>(2) Marceline</strong></h4>
+<p><strong>Original:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/0c104577-449f-4467-b8f7-abe8d58b16c5-3-ec32452d-420e-456d-8fba-94e92c84642f.jpg" class="img-fluid figure-img"></p>
+<figcaption>marceline.jpg</figcaption>
+</figure>
+</div>
+<p><strong>LLM Generation:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/0c104577-449f-4467-b8f7-abe8d58b16c5-1-72075adc-d495-4eee-9181-a68bbd987b34.png" class="img-fluid figure-img"></p>
+<figcaption>marc1.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/0c104577-449f-4467-b8f7-abe8d58b16c5-2-8bebf9b5-9bf9-420c-92ed-1506bad03ff9.png" class="img-fluid figure-img"></p>
+<figcaption>marcy2.png</figcaption>
+</figure>
+</div>
+<hr>
+<p>I found this image generation to be quite impressive as the original character lacks some “human features” such as a nose. The character also has grey skin, which is certainly not a typical human feature. These may have acted as challenges to the generation, but despite this, they seemed true to the original animation. In this image, I particularly like how the original angle of the reference was retained, and how the guitar seems true to life as well. However, my main criticism is that the fangs are not apparent in the generated images as they are in the reference photo.</p>
+<hr>
+</section>
+<section id="arnold" class="level4">
+<h4 class="anchored" data-anchor-id="arnold"><strong>(3) Arnold</strong></h4>
+<p><strong>Original:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/b56d73d7-c9c9-4759-ab01-17410e8109b5-3-69f2e2dd-3232-4419-941a-c4939216265a.png" class="img-fluid figure-img"></p>
+<figcaption>arnold.png</figcaption>
+</figure>
+</div>
+<p><strong>LLM Generation:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/b56d73d7-c9c9-4759-ab01-17410e8109b5-2-2b46a266-d359-4bad-b3c6-eff102fa4030.png" class="img-fluid figure-img"></p>
+<figcaption>arnold1.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="art_files/figure-html/b56d73d7-c9c9-4759-ab01-17410e8109b5-1-1af78d09-239f-49c2-892c-967187229d34.png" class="img-fluid figure-img"></p>
+<figcaption>2.png</figcaption>
+</figure>
+</div>
+<hr>
+<p>Now, this came out a little wonky! Despite the challenges with this specific image generation, GPT-5.2 did a great job capturing the essence of the character. However, it seems that when it came to the generation of the rest of the facial features of the character, the model went for a more generic route. Even so, GPT-5.2 captured the other details accurately such as the prop, hair, clothing, and background. While I do question how realistic this image is, I cannot fault the image for not being faithful to the original source material.</p>
+<p>In addition, I must note that there were additional challenges to this image generation. There are copyrighted characters that OpenAI states that they cannot generate images of, and this would include all of the characters that I requested it to generate. However, only when it came to Arnold was image generation stopped and error messages were displayed. This is likely because the LLM was unable to create a “generic” not copyrighted, yet similar alternative to the character because his silhouette and features are very distinctly related to this specific unique character. Due to this, the second generated image was the result of the model creating a generic image prompt based on the reference image, which resulted in a more distinct generation than the first one.</p>
+<hr>
+</section>
 </section>
 <section id="my-reflection" class="level3">
 <h3 class="anchored" data-anchor-id="my-reflection">My Reflection</h3>
-<p>Overall, while it was interesting to experiment with the LLMs, the results didn’t quite come out the way I had hoped it would. It seems to me that the LLMs were much more familiar with the problems than I had originally hoped they would be, so they were able to get the answer much more quicker than I expected. Even so, I think it was interesting to see how each LLM approached the solution in different ways, where gemini 2.5 flash specifically took a unique approach of looking at the problem in context declining internal pressure rather than simply a plane crash.</p>
+<p>I love how these images turned out! It’s truly so crazy how powerful these LLM image generators are, and how they are able to create such aesthetic and detailed art within the span of a few minutes. However, despite how amazing they were, I can definitely foresee some challenges with image generation in the future with copyrighting laws, which may lead to some legal, or even potentially ethical dilemmas. The line between inspiration and appropriation starts to blur a little, and it brings to question the ethics of essentially taking ownership over these original character designs and creating it as your own through LLMs–who is the true creator in this case?</p>
 
 
 </section>

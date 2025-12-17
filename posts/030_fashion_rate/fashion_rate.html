@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lindsey Lee">
-<meta name="dcterms.date" content="2025-12-13">
-<meta name="description" content="How viable is OpenEvidence to get ?">
+<meta name="dcterms.date" content="2025-12-16">
+<meta name="description" content="How will AI rate my outfits?">
 
-<title>Experimenting with OpenEvidence – Lindsey Lee - Explorations with LLMs</title>
+<title>Are LLMs Secret Fashionistas? – Lindsey Lee - Explorations with LLMs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,16 +108,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Experimenting with OpenEvidence</h1>
+      <h1 class="title">Are LLMs Secret Fashionistas?</h1>
                   <div>
         <div class="description">
-          How viable is OpenEvidence to get ?
+          How will AI rate my outfits?
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">LLMs</div>
-                <div class="quarto-category">Healthcare</div>
-                <div class="quarto-category">Prompting</div>
+                <div class="quarto-category">Fun</div>
+                <div class="quarto-category">Fashion</div>
               </div>
                   </div>
   </div>
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 13, 2025</p>
+        <p class="date">December 16, 2025</p>
       </div>
     </div>
     
@@ -157,33 +157,198 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="openev_files/figure-html/58a152a0-eba6-46d4-bc54-fbcc4afa2a58-1-ee2fa1d0-4c05-43ae-a86a-31e2014ca8c0.png" class="img-fluid figure-img"></p>
-<figcaption>puzzle.png</figcaption>
+<p><img src="fashion_rate_files/figure-html/58a152a0-eba6-46d4-bc54-fbcc4afa2a58-1-9b570247-bde7-440e-a29b-b248382d9698.png" class="img-fluid figure-img"></p>
+<figcaption>miffyyy.png</figcaption>
 </figure>
 </div>
 <hr>
-<p>As discussed in class and in the book, <em>These Strange New Minds</em>, LLMs are truly powerful logical systems that have honed their abilities to solve logical puzzles, including those of lateral thinking puzzles. Lateral thinking puzzles are a genre of “word puzzles” that rely on outside-the-box thinking and rationalization to obtain context around a problem and answer the puzzle. I was curious in the LLM’s ability to accurately and swiftly deduce the answer. I decided to experiment the following lateral puzzle with gpt-4o and gemini 2.5 flash in the following prompt:</p>
-<blockquote class="blockquote">
-<p>I have a lateral thinking puzzle for you. Try to solve it by asking one yes-or-no question at a time until you uncover the answer. Here’s the puzzle scenario:</p>
-<p>A cabin is resting on the side of a mountain. It’s tightly sealed with all doors and windows locked from the inside. Strangely, everyone inside is dead, and they all met their demise at the same moment. There was no foul play—no murders, suicides, illnesses, or suffocation involved. Can you figure out how they died?</p>
-</blockquote>
-<p>The trick behind this lateral thinking puzzle is that you need to think outside the box to find out that the “cabin” is not a cabin house as you would be led to believe because it is in the woods. It is actually an airplane cabin!</p>
-<p>Now, let’s see how these LLMs do!</p>
-<section id="gpt-4o" class="level3">
-<h3 class="anchored" data-anchor-id="gpt-4o">GPT-4o</h3>
-<p>GPT-4o was extremely efficient at answering the puzzle. It only took 3 questions for it to answer the puzzle. The three questions it asked included: &gt; 1. Is the “cabin” a vehicle of some kind? &gt; 2. Was the cabin an airplane? &gt; 3. Did the airplane crash into the mountain, causing the deaths of everyone inside?</p>
-<p>I asked the LLM after if it was familiar with the question, and it answered, “Yes, I’m familiar with this puzzle. It’s a classic lateral thinking puzzle that I’ve come across before.” Now, this leads me to believe that gpt-4o had already encountered this puzzle in its training data, so it was very well-equipped to answer this lateral thinking question.</p>
-<p>I’m a little sad, as I felt that this didn’t feel like a full reflection of the LLM’s ability to reason and think through a problem, as it rather already had access to the solution. Nonetheless, it asked questions and arrived at a solution.</p>
+<p>We established in a previous blog post that LLMs are able to quite accurately identify different articles of clothing in an image and match it with a specific dress code. As a person who loves fashion and dressing up, I then got curious to see how LLMs would view my own fashion choices. Let’s put it to the test!</p>
+<section id="method" class="level3">
+<h3 class="anchored" data-anchor-id="method">Method</h3>
+<p>Before we rate the outfits themselves, I wanted to create a measure to rate the outfits on. I used GPT-4o to brainstorm this process, asking it to brainstorm objective ways to rate fashion, and then following up with asking it to create a measure with scales based on this.</p>
+<p>This was the final product: &gt; Rating Criteria (Score each 1–5) &gt; 1. Fit &amp; Construction – Accuracy of fit, tailoring, and garment finish. &gt; 2. Proportion &amp; Silhouette – Balance of volume, length, and overall shape. &gt; 3. Color &amp; Material Harmony – Cohesion of color palette, fabric choice, and texture. &gt; 4. Cohesion &amp; Styling Intent – Clarity, consistency, and intentionality of the overall look. &gt; 5. Function &amp; Context – Practicality and suitability for the setting or purpose. &gt; &gt; Scoring: &gt; &gt; 5 = Exceptional execution &gt; &gt; 3 = Adequate / competent &gt; &gt; 1 = Poor or inconsistent execution</p>
+<p>For this exercise, I deliberately chose full-body pictures that would showcase the entire outfit. I uploaded each of these images to GPT-5.2 and gave two prompts–one that embodies a high fashion critic, and another a pinterest user. I believe these “critics” are on the opposite ends of the fashion spectrum, being that one is more professional, whereas the other appreciates a more personal style. I re-used some elements from my dress code prompt because I found that it worked very well. The prompts are as follows:</p>
+<p><strong>(1) High Fashion Critic</strong> &gt; Imagine you are a high fashion critic and like rating casual ‘streetwear’ in the public. &gt; &gt;Please use the following rating criteria to assign each outfit in the image uploaded a score. In order to accomplish this, please follow these steps: &gt; 1. Describe the outfit in the image (Identify any articles of clothing you can discern). &gt; 2. Given the description, rate the outfit following the rating criteria provided below: &gt; - [insert rating criteria]</p>
+<p><strong>(2) Pinterest User</strong> &gt; Imagine you are an avid Pinterest user. You have love unique, personal styles that are aesthetic and like to rate casual ‘streetwear’ in public. &gt; &gt; Please use the following rating criteria to assign each outfit in the image uploaded a score. In order to accomplish this, please follow these steps: &gt; 1. Describe the outfit in the image (Identify any articles of clothing you can discern). &gt; 2. Given the description, rate the outfit following the rating criteria provided below: &gt; - [insert rating criteria]</p>
 </section>
-<section id="gemini-2.5-flash" class="level3">
-<h3 class="anchored" data-anchor-id="gemini-2.5-flash">Gemini 2.5 Flash</h3>
-<p>Gemini 2.5 Flash took longer than I expected it to. While it seemed to make some headway quickly about the context of the problem, it had the assumption that the “cabin” was a stationary cabin in the mountain rather than a “cabin” in an aircraft for quite some time before it finally figured it out. In addition, this model appeared to take somewhat a more scientific approach in its response, asking about whether the cabin experienced a “rapid and significant change in altitude” or “experienced a sudden and catastrophic loss of internal pressure.” Thus, it took 8 questions in total to reach this conclusion, which is certainly impressive, but not as impressive as gpt-4o.</p>
-<p>I felt that gemini 2.5 flash’s approach to the problem to be very unique as rather than understanding the accident as simply a plane crash, it tried to further rationalize the cause of death, attributing it to “rapid change in altitude” and pressure. I wonder if these differences in approach between gemini 2.5 flash and gpt-4o are due to unique differences in their training data and how they utilize their training data. Perhaps gemini 2.5 flash is used to giving more specific answers, and thus opted for this reasoning.</p>
+<section id="outfit-1" class="level3">
+<h3 class="anchored" data-anchor-id="outfit-1">Outfit #1</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fashion_rate_files/figure-html/aef920ce-4195-4112-8fa7-22f57782149b-1-62ee4fc9-2705-4819-ba2d-5f9c3214525d.jpg" class="img-fluid figure-img"></p>
+<figcaption>ccdr 2025-11-28 121531.729.jpg</figcaption>
+</figure>
+</div>
+<section id="llm-output---high-fashion" class="level4">
+<h4 class="anchored" data-anchor-id="llm-output---high-fashion"><strong>LLM Output - High Fashion:</strong></h4>
+<ol type="1">
+<li><strong>Outfit description (what I can see)</strong></li>
+</ol>
+<ul>
+<li>Outerwear: Black, double-breasted mid-length coat (structured, slightly A-line; looks like a trench-inspired wool coat).</li>
+<li>Top: Bright red knit (reads like a turtleneck or high-neck sweater).</li>
+<li>Bottom: Light gray wide-leg / flared trousers with a long, drapey break.</li>
+<li>Shoes: Dark low-profile shoes (reads like loafers or sleek flats/boots).</li>
+<li>Accessories: Oversized crossbody/duffel-style bag with a bold strap; glasses.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Rating (1–5 each)</strong>
+<ol type="1">
+<li>Fit &amp; Construction — 4/5 The coat looks well-structured and cleanly finished; trousers are intentionally roomy, though the hem pooling suggests it’s slightly long.</li>
+<li>Proportion &amp; Silhouette — 4/5 Strong shape: tailored coat up top + wide-leg pant creates an elegant, modern column. The oversized bag adds weight, but it still works as “city” styling.</li>
+<li>Color &amp; Material Harmony — 5/5 Black + gray base with a confident red pop is classic and high-impact. The knit texture against the coat reads intentional and seasonal.</li>
+<li>Cohesion &amp; Styling Intent — 4/5 Clear vibe: polished streetwear / smart-campus minimalism. If you swapped in a sharper shoe (sleek boot) or added a small metallic detail, it would feel even more “edited.”</li>
+<li>Function &amp; Context — 5/5 Practical for an urban/outdoor setting—warm layers, comfortable trousers, and a bag that actually carries real life.</li>
+</ol></li>
+</ol>
+<p>Overall: 22/25 ✅ — clean, chic, and very wearable with a strong statement color done the right way.</p>
+</section>
+<section id="llm-output---pinterest" class="level4">
+<h4 class="anchored" data-anchor-id="llm-output---pinterest"><strong>LLM Output - Pinterest:</strong></h4>
+<ol type="1">
+<li><strong>Outfit description (what I can see)</strong></li>
+</ol>
+<ul>
+<li>Top: bright red knit (looks like a turtleneck/mock neck).</li>
+<li>Outerwear: black, mid-thigh coat (structured, buttoned; reads like a trench/pea-coat hybrid).</li>
+<li>Bottoms: light gray wide-leg / slightly flared trousers.</li>
+<li>Shoes: black low-profile shoes (details are a bit hard to make out).</li>
+<li>Accessories: large black/charcoal duffel/shoulder bag with a patterned strap; glasses.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Streetwear rating (1–5 each)</strong>
+<ol type="1">
+<li>Fit &amp; Construction — 4/5 Coat looks clean and structured; trousers drape nicely with minimal bunching.</li>
+<li>Proportion &amp; Silhouette — 4/5 The wide-leg pant + mid-length coat gives a cool, balanced silhouette; the flare adds movement.</li>
+<li>Color &amp; Material Harmony — 4/5 Black + gray is classic, and the red is a strong intentional pop without clashing.</li>
+<li>Cohesion &amp; Styling Intent — 4/5 Feels deliberate: sleek outerwear + statement knit + relaxed trouser = “casual city” done right.</li>
+<li>Function &amp; Context — 5/5 Looks practical for an outdoor/public setting (layers + bag + comfy bottoms).</li>
+</ol></li>
+</ol>
+<p>Overall: 21/25 ✅ (strong, aesthetic casual streetwear with a confident red accent).</p>
 <hr>
+</section>
+</section>
+<section id="outfit-2" class="level3">
+<h3 class="anchored" data-anchor-id="outfit-2">Outfit #2</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fashion_rate_files/figure-html/9da11b23-6d57-4741-8f36-0f44c5f33384-1-c1260bd2-1a04-4a6b-83ce-206080d42670.jpg" class="img-fluid figure-img"></p>
+<figcaption>ccdr 2025-11-27 161724.927.jpg</figcaption>
+</figure>
+</div>
+<section id="llm-output---high-fashion-1" class="level4">
+<h4 class="anchored" data-anchor-id="llm-output---high-fashion-1"><strong>LLM Output - High Fashion:</strong></h4>
+<ol type="1">
+<li><strong>Outfit description (what I can see)</strong></li>
+</ol>
+<ul>
+<li>Outerwear: Black mid-length coat (structured, practical, city-ready).</li>
+<li>Scarf: Oversized striped scarf in wide bands (cream/white, gray, charcoal) — the main styling “statement.”</li>
+<li>Bottom: Light gray wide-leg trousers (long, drapey, pooling slightly at the shoe).</li>
+<li>Shoes: Dark chunky shoes (reads like loafers or thick-soled shoes/boots).</li>
+<li>Accessories: Large shoulder tote in a dark neutral; glasses.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Rating (1–5 each)</strong>
+<ol type="1">
+<li>Fit &amp; Construction — 4/5 Coat looks clean and solid; trousers are intentionally relaxed but a touch long at the hem.</li>
+<li>Proportion &amp; Silhouette — 4/5 Great big-scarf + wide-leg combo feels modern. The scarf is very dominant, but it’s balanced by the coat’s structure.</li>
+<li>Color &amp; Material Harmony — 5/5 Black + gray palette with a high-contrast scarf is a classic “quiet luxury” move; textures layer well and feel seasonal.</li>
+<li>Cohesion &amp; Styling Intent — 4/5 Clear vibe: polished cold-weather streetwear. One sharper detail (sleeker shoe or a more refined bag) could push it into true “editor” territory.</li>
+<li>Function &amp; Context — 5/5 Perfect for an outdoor city setting: warm, comfortable, and actually walkable.</li>
+</ol></li>
+</ol>
+<p>Overall: 22/25 ✅ — strong, cohesive winter streetwear with the scarf doing exactly what it’s supposed to do: make the look look styled rather than just dressed.</p>
+</section>
+<section id="llm-output---pinterest-1" class="level4">
+<h4 class="anchored" data-anchor-id="llm-output---pinterest-1"><strong>LLM Output - Pinterest:</strong></h4>
+<ol type="1">
+<li><strong>Outfit description (what I can see)</strong></li>
+</ol>
+<ul>
+<li>Outerwear: black mid-length coat (clean, structured casual outerwear)</li>
+<li>Neckwear: oversized striped scarf (white + charcoal/gray blocks)</li>
+<li>Bottoms: light gray wide-leg trousers</li>
+<li>Shoes: black, slightly chunky shoes (reads like loafers/derbies)</li>
+<li>Bag: large black/charcoal shoulder bag</li>
+<li>Accessories: glasses (and a small camera in hand)</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Ratings (1–5 each)</strong>
+<ol type="1">
+<li>Fit &amp; Construction — 4/5 Coat looks well-fitted through the shoulders; trousers hang nicely with a relaxed drape.</li>
+<li>Proportion &amp; Silhouette — 5/5 Big scarf + structured coat + wide-leg pants creates a very intentional “cozy city” silhouette that looks balanced, not bulky.</li>
+<li>Color &amp; Material Harmony — 4/5 Black/gray base is cohesive; the scarf adds strong texture contrast and keeps it from feeling flat.</li>
+<li>Cohesion &amp; Styling Intent — 4/5 Clear vibe (minimal, comfy streetwear). Everything matches—could be a 5 with one sharper focal detail (e.g., a pop color accessory), but it’s still very clean.</li>
+<li>Function &amp; Context — 5/5 Perfect for chilly outdoor steps: warmth, movement, and practical footwear + bag.</li>
+</ol></li>
+</ol>
+<p>Overall score: 22/25 ✅</p>
+<hr>
+</section>
+</section>
+<section id="outfit-3" class="level3">
+<h3 class="anchored" data-anchor-id="outfit-3">Outfit #3</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fashion_rate_files/figure-html/ac824363-aedf-46db-98dc-dad1ba895b2e-1-7a6550fd-790e-489d-91e5-893c73691996.jpg" class="img-fluid figure-img"></p>
+<figcaption>ccdr 2025-11-26 115356.352.jpg</figcaption>
+</figure>
+</div>
+<section id="llm-output---high-fashion-2" class="level4">
+<h4 class="anchored" data-anchor-id="llm-output---high-fashion-2"><strong>LLM Output - High Fashion:</strong></h4>
+<ol type="1">
+<li><strong>Outfit description (what I can see)</strong></li>
+</ol>
+<ul>
+<li>Top: Oversized striped knit sweater in soft pink + black, with star motifs (graphic, playful statement knit).</li>
+<li>Bottom: Long black maxi skirt (looks flowy, possibly chiffon/pleated or layered).</li>
+<li>Shoes: Black chunky lace-up boots (combat-boot vibe; practical traction).</li>
+<li>Accessories: Large slouchy shoulder bag in a dark gray/black tone; glasses.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Rating (1–5 each)</strong>
+<ol type="1">
+<li>Fit &amp; Construction — 4/5 Sweater looks intentionally oversized and cozy; skirt hangs cleanly. Boots look solid and purposeful.</li>
+<li>Proportion &amp; Silhouette — 5/5 The big knit + long skirt + chunky boot combo is a very fashion-forward silhouette (soft volume on top, length below, weight at the base).</li>
+<li>Color &amp; Material Harmony — 4/5 Pink/black graphic knit with an all-black skirt is strong. The bag is close enough, but it’s slightly “different lane” (more utilitarian than styled).</li>
+<li>Cohesion &amp; Styling Intent — 4/5 Clear intent: playful streetwear with an alt/prep edge. One extra intentional detail (earrings, belt, or a tighter bag choice) would make it feel fully editorial.</li>
+<li>Function &amp; Context — 4/5 Great for a casual walk (boots help), but the maxi skirt is less “practical” in wet weather—still totally workable.</li>
+</ol></li>
+</ol>
+<p>Overall: 21/25 ✅ — the silhouette is the star here: cozy statement knit meets grounded boots, with the maxi skirt giving it that “actually styled” energy.</p>
+</section>
+<section id="llm-output---pinterest-2" class="level4">
+<h4 class="anchored" data-anchor-id="llm-output---pinterest-2"><strong>LLM Output - Pinterest:</strong></h4>
+<ol type="1">
+<li><strong>Outfit description (what I can see)</strong></li>
+</ol>
+<ul>
+<li>Top: oversized pink + black striped sweater with star motifs (graphic knit vibe).</li>
+<li>Bottom: long black flowy skirt (looks like a layered/pleated maxi with movement).</li>
+<li>Shoes: black chunky shoes/boots (practical, slightly edgy).</li>
+<li>Bag: large gray/charcoal shoulder bag.</li>
+<li>Accessories: glasses (and possibly a simple necklace).</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Rating (1–5 each)</strong>
+<ol type="1">
+<li>Fit &amp; Construction — 4/5 Sweater looks intentionally roomy and the skirt drapes cleanly; overall finish reads solid.</li>
+<li>Proportion &amp; Silhouette — 5/5 Oversized knit + long skirt is a great high/low volume balance—very Pinterest “cozy statement” silhouette.</li>
+<li>Color &amp; Material Harmony — 5/5 Pink/black is bold but controlled, and the soft knit + airy skirt texture contrast works really well.</li>
+<li>Cohesion &amp; Styling Intent — 5/5 Clear, intentional vibe: playful graphic knit + minimalist black skirt + chunky shoes = distinct personal style.</li>
+<li>Function &amp; Context — 4/5 Great for a park stroll in cool weather, though the maxi skirt + wet ground is the only mild practicality knock.</li>
+</ol></li>
+</ol>
+<p>Overall score: 23/25 ✅</p>
+<hr>
+</section>
 </section>
 <section id="my-reflection" class="level3">
 <h3 class="anchored" data-anchor-id="my-reflection">My Reflection</h3>
-<p>Overall, while it was interesting to experiment with the LLMs, the results didn’t quite come out the way I had hoped it would. It seems to me that the LLMs were much more familiar with the problems than I had originally hoped they would be, so they were able to get the answer much more quicker than I expected. Even so, I think it was interesting to see how each LLM approached the solution in different ways, where gemini 2.5 flash specifically took a unique approach of looking at the problem in context declining internal pressure rather than simply a plane crash.</p>
+<p>I originally suspected that there may be a difference in how the high fashion critic LLM viewed the outfits compared to the Pinterest LLM, and it seems that I was correct–to some extent. The first two outfits are very neutral, and quite similar to one another, which earned it similar scores ranking between a 21 and 22. However, the third outfit, which would not be the most typical type of clothing found on the street was a little more polarizing. While the high fashion critic LLM found the outfit to be lacking in some additional “edge” that would elevate the outfit, the Pinterest LLM focused on the showcase of personal style of the outfit and commended its distinctness.</p>
+<p>While it was nice to hear these nice compliments from GPT-5.2, I am ultimately skeptical of the results because I find that the ratings were far too generous–especially for the high fashion LLM. After all, I don’t typically find my outfits on the runway, and I don’t particularly believe that I would find it successful on it either. So, my goal next time would be to better refine these prompts to make my critics just a little bit more pickier.</p>
 
 
 </section>
