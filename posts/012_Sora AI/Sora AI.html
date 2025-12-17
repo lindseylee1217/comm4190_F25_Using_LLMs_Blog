@@ -202,15 +202,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In today’s digital age, the line between reality and fabrication is becoming increasingly blurred, thanks to the rapid advancements AI-generated videos. These videos are widespread, encompassing a wide range of content—from soothing ASMR clips and entertaining animal antics to more sinister applications that include spreading misinformation and creating lifelike videos of political figures. In this blog, I wanted to survey my friends and see whether they would believe my AI video was real.</p>
 <hr>
 <p>For this purpose, I used Video AI by invideo, powered by sora AI, which has been taking the general media by storm. I wanted to generate a video that seemed the most innoncent of all–an adorable animal video. I generated it in the form of a tiktok so that it would seem more realistic to my friends.</p>
-<p>This was the conversation I had: &gt; <strong>Me:</strong> Create a realistic tiktok video featuring a dog and cat playing with each other. &gt; &gt; <strong>Assistant</strong>: Here are two ideas to choose from: &gt; - <strong>Option A – “Best Buddies Forever” (30 sec)</strong> A warm, cozy, heart-melting short showing a dog and cat playing together in slow motion — light background music, golden lighting, and a cheerful narration about unlikely friendships. &gt; &gt; - <strong>Option B – “Battle of the Furballs” (45 sec)</strong> Funny, fast-paced, and meme-style — zooms, playful music, and captions as if the dog and cat are having a mock battle, ending in a cuddle. &gt; <strong>Me:</strong> A, as long as its giving wholesome and fuzzy heart-warming vibes. No narration is needed. &gt; &gt; <strong>Assistant:</strong> Just to confirm before I generate it: &gt; * <strong>Platform:</strong> TikTok &gt; * <strong>Style:</strong> Realistic, cozy, natural lighting, no narration (just music &amp; visuals) &gt; * <strong>Duration:</strong> ~30 seconds &gt; * <strong>Mood:</strong> Wholesome, warm, “aww” vibes — dog and cat playing affectionately indoors or in a sunlit garden &gt; &gt; <strong>Me:</strong> Keep it natural with ambient sounds</p>
+<p>This was the conversation I had:</p>
+<blockquote class="blockquote">
+<p><strong>Me:</strong> Create a realistic tiktok video featuring a dog and cat playing with each other.</p>
+<p><strong>Assistant</strong>: Here are two ideas to choose from: - <strong>Option A – “Best Buddies Forever” (30 sec)</strong> A warm, cozy, heart-melting short showing a dog and cat playing together in slow motion — light background music, golden lighting, and a cheerful narration about unlikely friendships.</p>
+<ul>
+<li><strong>Option B – “Battle of the Furballs” (45 sec)</strong> Funny, fast-paced, and meme-style — zooms, playful music, and captions as if the dog and cat are having a mock battle, ending in a cuddle. <strong>Me:</strong> A, as long as its giving wholesome and fuzzy heart-warming vibes. No narration is needed.</li>
+</ul>
+<p><strong>Assistant:</strong> Just to confirm before I generate it: * <strong>Platform:</strong> TikTok * <strong>Style:</strong> Realistic, cozy, natural lighting, no narration (just music &amp; visuals) * <strong>Duration:</strong> ~30 seconds * <strong>Mood:</strong> Wholesome, warm, “aww” vibes — dog and cat playing affectionately indoors or in a sunlit garden</p>
+<p><strong>Me:</strong> Keep it natural with ambient sounds</p>
+</blockquote>
 <p>Would you like me to include <strong>soft background music</strong> (like acoustic or piano), or leave it completely natural with ambient sounds (like their playful barks/meows)?</p>
 <p>Which one do you prefer, or do you have another tone in mind (e.g., cinematic, ASMR, funny, cute, emotional)?</p>
 <p>The video is embedded below:</p>
 <div id="397e1bca-67ab-45ed-b851-1513768c63a7" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>html</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>iframe width<span class="op">=</span><span class="st">"560"</span> height<span class="op">=</span><span class="st">"315"</span> src<span class="op">=</span><span class="st">"https://www.youtube.com/shorts/yccjHob05u8"</span> frameborder<span class="op">=</span><span class="st">"0"</span> allowfullscreen<span class="op">&gt;&lt;/</span>iframe<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<iframe width="560" height="315" src="https://www.youtube.com/shorts/yccjHob05u8" frameborder="0" allowfullscreen=""></iframe>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> IFrame, HTML</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> play_youtube(url, width<span class="op">=</span><span class="va">None</span>, height<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    is_short <span class="op">=</span> <span class="st">'/shorts/'</span> <span class="kw">in</span> url</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'/shorts/'</span> <span class="kw">in</span> url:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        video_id <span class="op">=</span> url.split(<span class="st">'/shorts/'</span>)[<span class="op">-</span><span class="dv">1</span>].split(<span class="st">'?'</span>)[<span class="dv">0</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="st">'youtu.be/'</span> <span class="kw">in</span> url:</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        video_id <span class="op">=</span> url.split(<span class="st">'youtu.be/'</span>)[<span class="op">-</span><span class="dv">1</span>].split(<span class="st">'?'</span>)[<span class="dv">0</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="st">'youtube.com/watch?v='</span> <span class="kw">in</span> url:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        video_id <span class="op">=</span> url.split(<span class="st">'watch?v='</span>)[<span class="op">-</span><span class="dv">1</span>].split(<span class="st">'&amp;'</span>)[<span class="dv">0</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="st">'youtube.com/embed/'</span> <span class="kw">in</span> url:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        video_id <span class="op">=</span> url.split(<span class="st">'embed/'</span>)[<span class="op">-</span><span class="dv">1</span>].split(<span class="st">'?'</span>)[<span class="dv">0</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Invalid YouTube URL format"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> width <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        width <span class="op">=</span> <span class="dv">315</span> <span class="cf">if</span> is_short <span class="cf">else</span> <span class="dv">560</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> height <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        height <span class="op">=</span> <span class="dv">560</span> <span class="cf">if</span> is_short <span class="cf">else</span> <span class="dv">315</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    embed_url <span class="op">=</span> <span class="ss">f"https://www.youtube.com/embed/</span><span class="sc">{</span>video_id<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> IFrame(src<span class="op">=</span>embed_url, width<span class="op">=</span>width, height<span class="op">=</span>height)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>play_youtube(<span class="st">"https://www.youtube.com/shorts/yccjHob05u8"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+
+        <iframe width="315" height="560" src="https://www.youtube.com/embed/yccjHob05u8" frameborder="0" allowfullscreen=""></iframe>
+        
 </div>
 </div>
 <p>If not showing above, the link is available here: https://www.youtube.com/shorts/yccjHob05u8</p>

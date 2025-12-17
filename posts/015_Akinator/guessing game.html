@@ -167,9 +167,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="comparing-akinator-gemini" class="level3">
 <h3 class="anchored" data-anchor-id="comparing-akinator-gemini">Comparing Akinator &amp; Gemini</h3>
 <p>I played my first game with Akinator. Akinator was able to guess my character quite promptly within 25 questions.</p>
-<p>With Gemini 2.5 Flash, I used the following prompt to start the discussion: &gt; Let’s play a game. You will ask me a series of yes-and-no questions to guess a character I’m thinking of. You can start.</p>
+<p>With Gemini 2.5 Flash, I used the following prompt to start the discussion:</p>
+<blockquote class="blockquote">
+<p>Let’s play a game. You will ask me a series of yes-and-no questions to guess a character I’m thinking of. You can start.</p>
+</blockquote>
 <p>Ultimately, in a round of 29 questions, Gemini was unable to deduce that my character was Miffy. Its final guess was Hazel from “The Countryside Adventures of Peter Rabbit.” Gemini especially struggled with this character guessing, as it was hung up on whether the character was from a British children’s show. One of its seemingly initial assumptions of the character was Ruby from “Max &amp; Ruby,” another popular kid’s show featuring a rabbit protagonist with a younger brother–similar to Miffy as she has presented previously and will present in her future series.</p>
-<p>I thought that it was interesting that Gemini had summarized its findings based on my response to its yes-and-no questions, stating a variation of: &gt; Okay, not Ruby, and the character does not live in a natural dwelling like a burrow. This means they live in a more constructed home, even if their world is a wild/forest setting. &gt; &gt; Let’s clarify that point: &gt; &gt; Does the character live in a house that resembles a human-style house (with walls, windows, furniture, etc.), rather than a simple hole or log?</p>
+<p>I thought that it was interesting that Gemini had summarized its findings based on my response to its yes-and-no questions, stating a variation of:</p>
+<blockquote class="blockquote">
+<p>Okay, not Ruby, and the character does not live in a natural dwelling like a burrow. This means they live in a more constructed home, even if their world is a wild/forest setting.</p>
+<p>Let’s clarify that point:</p>
+<p>Does the character live in a house that resembles a human-style house (with walls, windows, furniture, etc.), rather than a simple hole or log?</p>
+</blockquote>
 <p>for example. Notably, the fact that the LLM was unable to get past “not Ruby” tells me that the LLM almost was “thinking harder” because it couldn’t find an answer that was not Ruby. This makes me wonder if the LLM’s training data and its method of data retrieval and processing is not the most efficient for binary searches such as what this task involved. Perhaps if the LLM received instructions on how to search for this character, it would have been able to more efficiently pinpoint Miffy, however, it might be that the overabundance of data that the LLM has may also have a role in making this process less efficient.</p>
 <hr>
 </section>

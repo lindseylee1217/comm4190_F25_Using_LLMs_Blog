@@ -166,23 +166,49 @@ ul.task-list li input[type="checkbox"] {
 <p>To test this, I decided to ask LLMs the age old question: Pineapples or no pineapples on pizza. I debated against gpt-4o.</p>
 <section id="test-1" class="level3">
 <h3 class="anchored" data-anchor-id="test-1">Test #1</h3>
-<p>My prompt was as follows: &gt; Let’s hold a debate about pineapple on pizza. I am debating for pineapple on pizza. You are debating for against pineapple on pizza. We will end the debate after 3 rounds of exchange, and you will then be an unbiased judge to determine who gave the strongest argument and rebutted arguments most effectively. &gt; &gt; I will begin with my opening statement: &gt; &gt; Pineapples belong on pizza because: &gt; &gt; 1. There are no rules against putting pineapples on pizza–we should be open to new culinary choices. &gt; &gt; 2. Sweet and salty flavor profiles are well-received in other cuisines and dishes. &gt; &gt; 3. The acidity of the pineapple cuts through the greasiness of the pizza.</p>
+<p>My prompt was as follows:</p>
+<blockquote class="blockquote">
+<p>Let’s hold a debate about pineapple on pizza. I am debating for pineapple on pizza. You are debating for against pineapple on pizza. We will end the debate after 3 rounds of exchange, and you will then be an unbiased judge to determine who gave the strongest argument and rebutted arguments most effectively.</p>
+<p>I will begin with my opening statement:</p>
+<p>Pineapples belong on pizza because:</p>
+<ol type="1">
+<li><p>There are no rules against putting pineapples on pizza–we should be open to new culinary choices.</p></li>
+<li><p>Sweet and salty flavor profiles are well-received in other cuisines and dishes.</p></li>
+<li><p>The acidity of the pineapple cuts through the greasiness of the pizza.</p></li>
+</ol>
+</blockquote>
 <p>I quickly realized that this prompt would not be sufficient for this activity because the LLM immediately began rebutting my arguments, rather than presenting its own contentions for its position to allow for a more educational and substantial debate. These changes to improve this are reflected in the next test.</p>
 </section>
 <section id="test-2" class="level3">
 <h3 class="anchored" data-anchor-id="test-2">Test #2</h3>
-<p>My second, revised prompt is as follows: &gt; Let’s hold a debate about pineapple on pizza. I am debating for pineapple on pizza. You are debating for against pineapple on pizza. We will end the debate after 3 rounds of exchange. The format of the debate will be as follows: &gt; &gt; 1. Round 1: Opening statements where both sides present opening statements and contentions. &gt; &gt; 2. Round 2: Both sides present counter arguments, elaborate on their previous contentions, and may begin rebuttals. &gt; &gt; 3. Round 3L Both sides will not be allowed to introduce new counterarguments but need to elaborate on their contentions. Then they will give their rebuttals and give a concluding statement. &gt; &gt; After the end of these 3 rounds, you will then be an unbiased judge to determine who gave the strongest argument and rebutted arguments most effectively. &gt; &gt; I will begin with my opening statement: &gt; &gt; Pineapples belong on pizza because: &gt; &gt; 1. there are no rules against putting pineapples on pizza–we should be open to new culinary choices. &gt; &gt; 2. sweet and salty flavor profiles are well-received in other cuisines and dishes. &gt; &gt; 3. the acidity of the pineapple cuts through the greasiness of the pizza.</p>
+<p>My second, revised prompt is as follows:</p>
+<blockquote class="blockquote">
+<p>Let’s hold a debate about pineapple on pizza. I am debating for pineapple on pizza. You are debating for against pineapple on pizza. We will end the debate after 3 rounds of exchange. The format of the debate will be as follows:</p>
+<ol type="1">
+<li><p>Round 1: Opening statements where both sides present opening statements and contentions.</p></li>
+<li><p>Round 2: Both sides present counter arguments, elaborate on their previous contentions, and may begin rebuttals.</p></li>
+<li><p>Round 3L Both sides will not be allowed to introduce new counterarguments but need to elaborate on their contentions. Then they will give their rebuttals and give a concluding statement.</p></li>
+</ol>
+<p>After the end of these 3 rounds, you will then be an unbiased judge to determine who gave the strongest argument and rebutted arguments most effectively.</p>
+<p>I will begin with my opening statement:</p>
+<p>Pineapples belong on pizza because:</p>
+<ol type="1">
+<li><p>there are no rules against putting pineapples on pizza–we should be open to new culinary choices.</p></li>
+<li><p>sweet and salty flavor profiles are well-received in other cuisines and dishes.</p></li>
+<li><p>the acidity of the pineapple cuts through the greasiness of the pizza.</p></li>
+</ol>
+</blockquote>
 <p>I wanted to capture our short debate as followed below:</p>
 <blockquote class="blockquote">
 <p style="color: #003399;">
-<b> USER </b>
-</p><p style="color: #003399;">
+</p><p><b> USER </b></p>
+<p style="color: #003399;">
 </p><p>[User prompt]</p>
 </blockquote>
 <blockquote class="blockquote">
 <p style="color: #993366;">
-<b> GPT-4o </b>
-</p><p style="color: #993366;">
+</p><p><b> GPT-4o </b></p>
+<p style="color: #993366;">
 </p><p>While culinary experimentation has value, pineapple does not belong on pizza because it undermines the foundational principles of the dish. Pizza is built around balance, texture, and cohesion, and pineapple disrupts all three in ways that other toppings generally do not.</p>
 <p style="color: #993366;">
 </p><p>Contentions:</p>
@@ -195,8 +221,8 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <blockquote class="blockquote">
 <p style="color: #003399;">
-<b> USER </b>
-</p><p style="color: #003399;">
+</p><p><b> USER </b></p>
+<p style="color: #003399;">
 </p><ol type="1">
 <li>in the modern world, tradition is no longer enough to make great food. even if it breaks tradition, experimental culinary choices should be appreicated to advance culinary sciences.</li>
 </ol>
@@ -217,8 +243,8 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <blockquote class="blockquote">
 <p style="color: #993366;">
-<b> GPT-4o </b>
-</p><p style="color: #993366;">
+</p><p><b> GPT-4o </b></p>
+<p style="color: #993366;">
 </p><p>Thank you for your points. While I acknowledge the role of experimentation in modern cuisine, the inclusion of pineapple on pizza still presents substantial issues.</p>
 <p style="color: #993366;">
 </p><p>Sweet and salty combinations are not universally appropriate: While sweet and salty pairings exist in other cuisines, context matters. Korean dishes, for instance, balance sweetness with spice, fermented flavors, and umami in complex ways. Pizza’s base—cheese, tomato sauce, dough—is a simpler flavor canvas. Adding pineapple’s sharp sweetness often overwhelms rather than harmonizes with this canvas, creating a flavor imbalance rather than a thoughtful complement.</p>
@@ -255,8 +281,8 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <blockquote class="blockquote">
 <p style="color: #993366;">
-<b> GPT-4o </b>
-</p><p style="color: #993366;">
+</p><p><b> GPT-4o </b></p>
+<p style="color: #993366;">
 </p><p>Thank you for your points. I will elaborate on my contentions, rebut your arguments, and conclude.</p>
 <p style="color: #993366;">
 </p><p>Elaboration on Contentions:</p>
@@ -277,7 +303,15 @@ ul.task-list li input[type="checkbox"] {
 <p style="color: #993366;">
 </p><p>Conclusion: In conclusion, pineapple disrupts the essential balance of flavors, introduces conflicting textures, and risks prioritizing novelty over meaningful culinary evolution. While some may enjoy it, from a culinary standpoint, pineapple on pizza remains an inferior choice compared to toppings that respect the dish’s traditional or evolved identity.</p>
 </blockquote>
-<p>Given this debate, gpt-4o gave the following ruling: &gt; Judging: &gt; &gt; Pro-Pineapple Arguments: Highlighted openness to culinary experimentation, cultural acceptance of sweet-salty flavors, and the practical benefit of cutting grease. Rebutted the moisture and cultural evolution points effectively, but relied heavily on general appeals to novelty and taste without deeply addressing culinary principles. &gt; &gt; Anti-Pineapple Arguments: Emphasized flavor balance, textural cohesion, and the concept of meaningful culinary evolution versus novelty. Rebuttals were specific and consistently grounded in culinary reasoning, even while acknowledging cultural and experimental perspectives. &gt; &gt; Verdict: &gt; &gt; The against pineapple on pizza side presented stronger arguments overall, with more detailed and structured reasoning, effective counterpoints, and a clear framework connecting flavor, texture, and cultural considerations. While the pro-pineapple side had appealing points about experimentation and taste, it did not sufficiently overcome the culinary critique. &gt; &gt; Winner: Against pineapple on pizza.</p>
+<p>Given this debate, gpt-4o gave the following ruling:</p>
+<blockquote class="blockquote">
+<p>Judging:</p>
+<p>Pro-Pineapple Arguments: Highlighted openness to culinary experimentation, cultural acceptance of sweet-salty flavors, and the practical benefit of cutting grease. Rebutted the moisture and cultural evolution points effectively, but relied heavily on general appeals to novelty and taste without deeply addressing culinary principles.</p>
+<p>Anti-Pineapple Arguments: Emphasized flavor balance, textural cohesion, and the concept of meaningful culinary evolution versus novelty. Rebuttals were specific and consistently grounded in culinary reasoning, even while acknowledging cultural and experimental perspectives.</p>
+<p>Verdict:</p>
+<p>The against pineapple on pizza side presented stronger arguments overall, with more detailed and structured reasoning, effective counterpoints, and a clear framework connecting flavor, texture, and cultural considerations. While the pro-pineapple side had appealing points about experimentation and taste, it did not sufficiently overcome the culinary critique.</p>
+<p>Winner: Against pineapple on pizza.</p>
+</blockquote>
 <hr>
 </section>
 <section id="final-thoughts-and-reflection" class="level3">

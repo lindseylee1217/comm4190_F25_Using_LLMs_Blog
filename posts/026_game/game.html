@@ -202,7 +202,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>With only one rudimentary python coding class under my belt, it’s been a true challenge to realize my hidden dream to be a game developer. However, given the computing and coding ability of LLMs, I was curious to see whether they can create a game from scratch if I gave it some guidelines–and given the restrictions of this managed jupyter notebook.</p>
 <p>I heard much about the coding capabilities of Claude-Sonnet 3.5, so I chose this LLM to be my coding buddy to create the classic game, Breakout, with some twists.</p>
-<p>My revised game rules are included in the prompt I fed Claude: &gt; Write me code for a game of Breakout that I can run on jupyter notebook in python. Please note that I am using a managed JupyterHub with no permission to install system packages. I want the following elements to be included: &gt; - point system as you hit bricks &gt; - a power up spawns in the form of a special brick that can expand the length of the platform. this power up randomly generates at the first minute (replacing one of the original brick blocks) and every 3 minutes after. The power up is granted upon the ball hitting it. &gt; - at least 100 bricks &gt; - 3 lives</p>
+<p>My revised game rules are included in the prompt I fed Claude:</p>
+<blockquote class="blockquote">
+<p>Write me code for a game of Breakout that I can run on jupyter notebook in python. Please note that I am using a managed JupyterHub with no permission to install system packages. I want the following elements to be included: - point system as you hit bricks - a power up spawns in the form of a special brick that can expand the length of the platform. this power up randomly generates at the first minute (replacing one of the original brick blocks) and every 3 minutes after. The power up is granted upon the ball hitting it. - at least 100 bricks - 3 lives</p>
+</blockquote>
 <hr>
 <section id="first-draft" class="level3">
 <h3 class="anchored" data-anchor-id="first-draft">First Draft</h3>
@@ -755,7 +758,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr>
-<p>This time, the game was able to load successfully, and in addition to working exactly as imagined, it looks great too! Despite this, I wanted to add a couple of improvements to the game, so I asked Claude to incorporate the following features: - stopwatch showing how long it has been since the game started - indicate the powerup brick with a star on the brick - increase the speed of the ball after every brick it breaks by 0.02%</p>
+<p>This time, the game was able to load successfully, and in addition to working exactly as imagined, it looks great too! Despite this, I wanted to add a couple of improvements to the game, so I asked Claude to incorporate the following features:</p>
+<ul>
+<li>stopwatch showing how long it has been since the game started</li>
+<li>indicate the powerup brick with a star on the brick</li>
+<li>increase the speed of the ball after every brick it breaks by 0.02%</li>
+</ul>
 <hr>
 </section>
 <section id="third-draft" class="level3">
@@ -1023,7 +1031,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <hr>
-<p>The game is improving at great lengths with the help of Claude here! However, I am still left a little unsatisfied with the speed increase percentage. So, I asked Claude for its input, and Claude shared: &gt; 2% is great if you want an exciting, high-difficulty challenge &gt; &gt; 0.5-1% would be better if you want a more gradual, manageable difficulty curve &gt; &gt; 0.02% (the original) was way too subtle to notice</p>
+<p>The game is improving at great lengths with the help of Claude here! However, I am still left a little unsatisfied with the speed increase percentage. So, I asked Claude for its input, and Claude shared:</p>
+<blockquote class="blockquote">
+<p>2% is great if you want an exciting, high-difficulty challenge</p>
+<p>0.5-1% would be better if you want a more gradual, manageable difficulty curve</p>
+<p>0.02% (the original) was way too subtle to notice</p>
+</blockquote>
 <p>With Claude’s suggestion and other disatisfactions I had, I wanted propose the following changes: - Give user two difficulty modes that they can select from before starting the game: Normal (1% speed change) and Hard (2% speed change) - Place the powerups within 4 brick levels closest to the platform (with consideration of what bricks have been broken)</p>
 <hr>
 </section>
